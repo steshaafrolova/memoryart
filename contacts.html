@@ -1,0 +1,1338 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MemoryArt</title>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" 
+    rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap" 
+    rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMzV06dD1d3a02LCx6VfS/A5G+e3er3tXjIoW"
+      crossorigin="anonymous"
+    />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link href=https://fonts.google.com/specimen/Cormorant+Garamond
+    rel="stylesheet" />
+    
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "DM Serif Text", serif;
+        background-color: black;
+        color: white;
+        margin: 0;
+        padding: 0;
+      }
+      .navbar {
+            transition: all 0.3s ease; 
+            display: block;
+        }
+      .top-header {
+  font-family: "Great Vibes", cursive;
+  color: rgb(241, 219, 26);
+  background-color: black;
+  text-align: center;
+  font-size: 2.5em;
+  padding: 15px 0; 
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+  transition: top 0.3s ease; 
+}
+      .my-header1 {
+        font-family: "Great Vibes", cursive;
+        color: rgb(241, 219, 26);
+        text-align: center;
+        font-size: 6em;
+        background-image:url(lalalal.webp);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 20px 0;
+        margin: 0;
+        width: 100vw;
+        position: relative;
+        transition: top 0.3s ease; 
+      }
+      .my-header22 {
+  font-family: "Archivo Black", sans-serif;
+  font-weight: bold;
+  color: rgb(241, 219, 26);
+  text-align: center;
+  font-size: 3em;
+  margin: 20px 0;
+}
+.my-header-pamytnyky {
+      font-family: "Great Vibes", cursive;
+      color: rgb(241, 219, 26);
+      text-align: center;
+      font-size: 4em;
+      background-size: cover;
+      background-position: center;
+      padding: 20px 0;
+      margin: 0;
+      width: 100vw;
+    }
+      .new-section {
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: rgb(241, 219, 26);
+        text-align: center;
+        margin-top: 20px;
+      }
+      .new-section h2 {
+        font-family: "Anton" cursive;
+        font-size: 2.5em;
+        color: rgb(241, 219, 26);
+        margin: 0;
+      }
+      .social-icons {
+    position: absolute !important;
+    right: px !important;
+    top: 55px !important;
+    display: flex !important;
+    gap: 10px !important;
+}
+
+  @media (max-width: 768px) {
+    .social-icons {
+      position: static; 
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+    }
+  }
+      .button {
+        cursor: pointer;
+        text-decoration: none;
+        color: #ffff;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #2d2e32;
+        border: 2px solid #2d2e32;
+        transition: all 0.45s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .button:hover {
+        transform: rotate(360deg);
+        transform-origin: center center;
+        background-color: #ffff;
+        color: #2d2e32;
+      }
+      .button:hover .btn-svg {
+        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(305deg)
+          brightness(103%) contrast(103%);
+      }
+      .dropdown-menu {
+        background-color: rgba(0, 0, 0, 0.9);
+        border: none;
+        border-radius: 0;
+      }
+      .dropdown-item {
+        color: rgb(241, 219, 26);
+        padding: 10px 20px;
+      }
+      .dropdown-item:hover {
+        background-color: rgb(241, 219, 26);
+        color: black;
+      }
+      .navbar {
+        background-color: #443436;
+        padding: 15px 0;
+        transition: top 0.3s ease; 
+        
+      }
+      .navbar-nav {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+      }
+      .navbar-nav .nav-link {
+        color: rgb(241, 219, 26) !important;
+        font-weight: bold;
+        font-family:"DM Serif Text", serif;
+        text-transform: uppercase;
+        padding: 10px 20px;
+        text-align: center;
+        font-size: 1.2em;
+      }
+      .navbar-nav .nav-link:hover {
+        color: rgb(0, 0, 0) !important;
+        background-color: rgb(241, 219, 26) !important;
+        border-radius: 5px;
+      }
+      .video-container {
+        position: relative;
+        width: 100%;
+        height: 60vh;
+        overflow: hidden;
+        margin-bottom: 20px;
+      }
+      .video-container video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .text-content {
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        transform: translateY(-50%);
+        text-align: left;
+        color: white;
+        width: 60%;
+      }
+      .text-content h2 {
+        font-family: "Archivo Black", sans-serif;
+        font-size: 2.5em;
+        color: rgb(241, 219, 26);
+        margin: 0;
+      }
+      .text-content p {
+        font-family: "Nunito Sans", sans-serif;
+        font-size: 1.1em;
+        line-height: 1.6em;
+        color: white;
+        margin: 10px 0 0;
+      }
+      button {
+        outline: none;
+        cursor: pointer;
+        border: none;
+        padding: 0.9rem 2rem;
+        margin: 10px 0 0;
+        font-family: inherit;
+        font-size: inherit;
+        position: relative;
+        display: flex;
+        letter-spacing: 0.05rem;
+        font-weight: 700;
+        font-size: 17px;
+        border-radius: 500px;
+        overflow: hidden;
+        background: rgb(241, 219, 26);
+        color: black;
+        align-items: center;
+        gap: 10px;
+      }
+      button:hover {
+        background: black;
+        color: white;
+      }
+
+      @media (max-width: 768px) {
+        .my-header1 {
+          font-size: 4em;
+        }
+        .text-content h2 {
+          font-size: 2em;
+        }
+        .text-content p {
+          font-size: 1em;
+        }
+      }
+      @media (max-width: 576px) {
+        .my-header1 {
+          font-size: 3em;
+        }
+        .text-content {
+          left: 5%;
+          width: 90%;
+        }
+        .text-content h2 {
+          font-size: 1.5em;
+        }
+        .text-content p {
+          font-size: 0.9em;
+        }
+      }
+
+      @keyframes slide-in-top {
+        0% {
+          transform: translateY(-50px);
+          opacity: 0;
+        }
+
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+      
+      .button-container {
+        display: flex;
+        align-items: center;
+      }
+
+      .additional-buttons {
+        display: flex;
+        gap: 10px;
+        margin-left: 20px;
+      }
+      .btn {
+        width: 7.5em;
+        height: 3,5em;
+        margin: 0.5em;
+        background: rgb(241, 219, 26);
+        color: black;
+        border: none;
+        border-radius: 0.625em;
+        font-size: 20px;
+        font-weight: bold;
+        cursor: pointer;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        font-family:"Nunito Sans", sans-serif ;
+      }
+      .btn:hover {
+        color: rgb(241, 219, 26);
+      }
+      .btn:hover:after {
+        background: black;
+        transform: skewX(-45deg) scale(1, 1);
+        transition: all 0.5s;
+      }
+      button:after {
+        content: "";
+        background: rgb(0, 0, 0);
+        position: absolute;
+        z-index: -1;
+        left: -20%;
+        right: -20%;
+        top: 0;
+        bottom: 0;
+        transform: skewX(-45deg) scale(0, 1);
+        transition: all 0.5s;
+      }
+
+      button:hover:after {
+        transform: skewX(-45deg) scale(1, 1);
+        -webkit-transition: all 0.5s;
+        transition: all 0.5s;
+      }
+     
+    .menu {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 20px;
+    }
+    .menu-item {
+      text-align: center;
+      transition: transform 0.3s;
+      width: 250px;
+    }
+    .menu-item img {
+      width: 100%;
+      height: auto;
+      transition: transform 0.3s;
+      font-family: "DM Serif Text", serif;
+    }
+    .menu-text {
+      font-family: "DM Serif Text", serif;
+      font-size: 1.1em;
+      font-weight: bold;
+      color: rgb(241, 219, 26);
+      display: block;
+      margin-top: 13px;
+    }
+    .menu-item:hover img {
+      transform: scale(1.1);
+    }
+    .header-link {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 10px;
+    }
+    .header-link h2 {
+      font-size: 35px;
+      font-weight: bold;
+      text-align: center;
+    }
+    .link-arrow {
+      top: -10px;
+      display: inline-flex;
+      align-items: center;
+      font-size: 26px;
+      color: #f6ea3e;
+      text-decoration: none;
+      font-weight: 600;
+      font-family:"DM Serif Text", serif;;
+    }
+    .link-arrow span {
+      font-size: 26px;
+      margin-right: 5px;
+      transition: margin-left 0.2s;
+    }
+    .link-arrow:hover span {
+      margin-left: 10px;
+    }
+.menu-item span {
+  font-family:"DM Serif Text", serif;
+  font-weight: bold;
+  font-size: 1.8em;
+  color: rgb(241, 219, 26);
+  margin-top: 8px;
+  display: block;
+}
+
+.product-gallery {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    max-width: 100%;
+}
+.gallery-wrapper {
+    overflow-x: auto;
+    flex: 1;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    padding: 10px 0;
+    max-width: 900px; /
+}
+.gallery-items {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.gallery-item {
+    display: inline-block;
+    margin-right: 20px;
+    text-align: center;
+    width: 180px; 
+    font-family:"DM Serif Text", serif;;
+}
+
+.gallery-item a {
+    text-decoration: none;
+    color: #333;
+    display: inline-block;
+}
+
+.gallery-item img {
+    width: 180px; 
+    height: 180px;
+    border-radius: 8px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item span {
+    display: block;
+    margin-top: 8px;
+    font-size: 18px; 
+    font-weight: 500;
+    color: rgb(241, 219, 26);
+}
+.scroll-btn {
+    background-color: rgb(241, 219, 26);
+    color: black;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    transition: background-color 0.3s;
+}
+.scroll-btn:hover {
+    background-color: #555;
+}
+.scroll-btn.left {
+    margin-right: 15px; 
+}
+
+.scroll-btn.right {
+    margin-left: 15px;
+}
+@media (max-width: 768px) {
+    .gallery-item {
+        margin-right: 10px;
+        width: 120px;
+    }
+
+    .gallery-item img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .gallery-item span {
+        font-size: 12px;
+    }
+
+    .scroll-btn {
+        padding: 8px;
+        font-size: 20px;
+    }
+}
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+.fade-in.visible {
+  opacity: 1;
+}
+.navbar, .my-header1 {
+      transition: transform 0.4s ease, opacity 0.4s ease;
+    }
+
+    .navbar.hidden, .my-header1.hidden {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    .my-header1 {
+  position: relative;
+}
+
+.social-icons {
+  position: absolute;
+  right: 40px; 
+  bottom: -10px; 
+  display: flex;
+  gap: 1px; 
+}
+
+.social-icon i {
+  color: rgb(241, 219, 26);
+  font-size:0.3em;
+  transition: color 0.3s;
+}
+
+.social-icon i:hover {
+  color: black; 
+}
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: -60px;
+  background-color: rgb(241, 219, 26);
+  color: black;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: right 0.4s ease, opacity 0.4s ease;
+  opacity: 0;
+  z-index: 1000;
+}
+
+.scroll-to-top.visible {
+  right: 20px;
+  opacity: 1;
+}
+
+.scroll-to-top i {
+  font-size: 20px;
+}
+
+.scroll-to-top:hover {
+  background-color: #443436;
+  color: rgb(241, 219, 26);
+}
+
+.gallery-wrapper {
+    overflow: hidden;
+}
+
+.scroll-top-btn i {
+    color: #333; 
+    font-size: inherit; 
+}
+@media (max-width: 576px) {
+  .social-icon i {
+    font-size: 0.3em; 
+  }
+  .social-icons {
+    margin-left: 40px;
+    margin-top: -1px;
+  }
+}
+.advantages-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.advantages-section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.advantages {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.advantage-item {
+    width: 180px;
+    text-align: center;
+}
+
+.icon-circle {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.icon-circle::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 3px solid rgb(241, 219, 26);
+    opacity: 0; 
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    transform: scale(0.9); 
+    box-sizing: border-box;
+}
+
+.icon-circle i {
+    font-size: 2.5em;
+    color: rgb(241, 219, 26);
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.icon-circle:hover::before {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.advantage-item h3 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.advantage-item p {
+    font-size: 16px;
+    color: rgb(241, 219, 26);
+}
+
+.advantage-item:hover .icon-circle::before {
+    animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+@media (max-width: 700px) {
+    .icon-circle {
+        width: 70px;
+        height: 70px;
+    }
+    .icon-circle::before {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        border: 2px solid #f1db1a;
+    }
+    .icon-circle i {
+        font-size: 1.5em;
+    }
+    .advantage-item h3 {
+        font-size: 16px;
+    }
+    .advantage-item p {
+        font-size: 12px;
+    }
+}
+
+.menu {
+  margin-bottom: 100px; 
+}
+
+.product-gallery {
+  margin-bottom: 100px;
+}
+
+.advantages-section {
+  margin-top: 100px; 
+}
+.quality-title {
+    font-family: "DM Serif Text", serif;
+    color: rgb(241, 219, 26); 
+    font-size: 24px; 
+    font-weight: 700; 
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); 
+}
+.step-arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.step-arrow i {
+    font-size: 28px; 
+    color: rgb(241, 219, 26); 
+}
+@media (max-width: 600px) {
+    .advantages {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .advantage-item, .advantage-step {
+        flex-direction: row;
+        justify-content: center; 
+    }
+
+    .quality-title {
+        font-size: 14px; 
+    }
+
+    .icon-circle {
+        width: 50px;
+        height: 50px; 
+    }
+
+    .advantage-step {
+        font-size: 20px; 
+    }
+}.advantage-item, .advantage-step {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out; 
+}
+
+.show {
+    opacity: 1; 
+    transform: translateY(0); 
+}
+.gray-background {
+  background-color: #443436;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-navigation {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 70px;
+  margin-bottom: 40px;
+}
+@media (max-width: 1024px) { 
+    .header-navigation {
+        flex-direction: column;
+  }
+}
+
+@media (max-width: 1024px) { 
+    .header-navigation {
+    align-items: center;
+  }
+}
+
+.mini-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.mini-header h2 {
+  font-size: 35px;
+  color: rgb(241, 219, 26);
+  font-weight: bold;
+  margin: 0;
+  font-family: "Great Vibes", cursive;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.mini-header p {
+  font-size: 28px;
+  margin: 0;
+  color: rgb(241, 219, 26);
+  font-family: "Great Vibes", cursive;
+}
+
+.navigation-container {
+  text-align: center;
+}
+
+.navigation-title {
+  font-size: 35px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: rgb(241, 219, 26);
+  font-family: "Great Vibes", cursive;
+}
+
+.navigation ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation ul li {
+  margin-bottom: 15px;
+}
+
+.navigation ul li a {
+  text-decoration: none;
+  color: rgb(241, 219, 26);
+  font-size: 16px;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.navigation ul li a:hover {
+  text-decoration: underline;
+}
+
+.slogan {
+  text-align: center;
+  font-size: 1.5em;
+  color: rgb(241, 219, 26);
+  padding-bottom: 10px;
+  font-family: "Great Vibes", cursive;
+}
+
+.navigation-and-catalog {
+    display: grid;
+    place-content: center;
+    gap: 40px;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 1024px) { 
+  .navigation-and-catalog {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) { 
+  .navigation-and-catalog {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.navigation-section,
+.catalog-section {
+  flex: 1;
+  text-align: center;
+  margin: 0 10px;
+}
+
+.contact-panel {
+  display: flex;
+  color: rgb(241, 219, 26);
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.contact-panel a {
+  text-decoration: none;
+  color: rgb(241, 219, 26);
+  display: flex;
+  align-items: center;
+}
+
+.contact-panel i {
+  font-size: 1.2em;
+  margin-right: 5px;
+}
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  box-sizing: border-box;
+}
+
+.footer-line {
+  width: 100%;
+  height: 1px;
+  background-color: #000000;
+  margin: 0;
+}
+
+.footer-text {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.footer-text a {
+  color: #fff;
+  text-decoration: none;
+}
+.social-icons {
+    position: absolute !important;
+    right: px !important;
+    top: 55px !important;
+    display: flex !important;
+    gap: 10px !important;
+}
+
+  @media (max-width: 768px) {
+    .social-icons {
+      position: static; 
+      margin-top: -1px;
+      display: flex;
+      justify-content: center;
+    }
+  }
+.footer-text a:hover {
+  text-decoration: underline;
+}
+.my-header-pamytnyky {
+  font-family: "Great Vibes", cursive;
+ color: rgb(241, 219, 26);
+   text-align: center;
+ font-size: 5em;
+  background-size: cover;
+  background-position: center;
+  padding: 20px 0;
+   margin: 0;
+   width: 100vw;
+   }
+   .my-header-chomy {
+    font-family: "Great Vibes", cursive;
+   color: rgb(241, 219, 26);
+    text-align: center;
+    font-size: 5em;
+   background-size: cover;
+  background-position: center;
+  padding: 20px 0;
+   margin: 0;
+   width: 100vw;
+   }
+ .my-header-beremo {
+  font-family: "Great Vibes", cursive;
+   color: rgb(241, 219, 26);
+    text-align: center;
+     font-size: 3em;
+    background-size: cover;
+  background-position: center;
+  padding: 20px 0;
+ margin: 0;
+   width: 100vw;
+    }
+.navbar {
+    position: sticky;
+    top: 0; 
+    width: 100%;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.hidden {
+    transform: translateY(-100%); 
+}
+.yellow-text {
+    color: rgb(241, 219, 26); 
+}
+.contact-section {
+    width: 100%;
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #000000;
+}
+.contact-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+
+.contact-details {
+    width: 32%; 
+    background-color: #000000;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    margin: 20px;
+}
+
+.contact-details p {
+    font-size: 1.6rem;
+    margin-bottom: 67px; 
+}
+
+.contact-details i {
+    margin-right: 10px;
+    color: rgb(241, 219, 26);
+}
+
+.contact-details a {
+    color: rgb(241, 219, 26);
+    text-decoration: none;
+}
+
+
+.map-container {
+    width: 70%; 
+    height: 100%; 
+    position: relative;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column; 
+    }
+
+    .contact-details {
+        width: 100%;
+        margin-bottom: 20px; 
+    }
+
+    .map-container {
+        width: 100%;
+        height: 400px;
+    }
+}
+.active-contact {
+    color: yellow;
+}
+
+    </style>
+  </head>
+  <body class="fade-in">
+    <h2 class="top-header ">З турботою про важливе</h2>
+    <h1 class="my-header1">
+      <a href="homemenu.html" style="color: rgb(241, 219, 26); text-decoration: none;">MemoryArt</a>
+      <div class="social-icons">
+        <a href="https://facebook.com" class="social-icon" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+        <a href="https://facebook.com" class="social-icon" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://instagram.com" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://viber.com" class="social-icon" target="_blank"><i class="fab fa-viber"></i></a>
+        <a href="mailto:frolovastesha7@gmail.com" class="social-icon" target="_blank"><i class="fa-sharp fa-solid fa-envelope"></i></a>
+        <a href="https://tiktok.com" class="social-icon" target="_blank"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </h1>
+    <!--navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav w-100">
+            <li class="nav-item">
+              <!-- buttons in navbar -->
+              <a class="flex-sm-fill text-sm-center nav-link" href="pamytnyky.html">Пам'ятники</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Vydygranity.html">Види граніту</a>
+            </li>
+            <li class="nav-item">
+              <a class="flex-sm-fill text-sm-center nav-link" href="nashiroboty.html">Наші роботи</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-no-fade>
+                Про нас
+              </a>
+              <ul class="dropdown-menu" data-no-fade>
+                <li>
+                  <a class="dropdown-item" href="memoryart.html" data-no-fade>MemoryArt</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="dostavkaioplata.html" data-no-fade>Доставка та оплата</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="putanny.html" data-no-fade>Питання та відповіді</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contacts.html">Контакти</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+<h3 class="my-header-chomy">Контакти</h3>
+<div class="contact-section">
+  <div class="contact-container">
+    <div class="contact-details">
+        <p>
+            <i class="fas fa-map-marker-alt"></i>
+            <a href="https://www.google.com/maps/place/%D0%A4%D1%80%D0%B0%D0%BD%D1%81/@47.5698489,34.3138222,12.25z/data=!4m6!3m5!1s0x40dca3f2cba46fe9:0x1cc89f1a55ed8620!8m2!3d47.5740056!4d34.3689814!16s%2Fg%2F11cs9mf1r8?entry=ttu&g_ep=EgoyMDI0MTAyOS4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+                проспект Трубників, 39А, Нікополь, Дніпропетровська область, 53200
+            </a>
+        </p>
+        <p>
+            <i class="fas fa-phone-alt"></i>
+            <a href="tel:+380000000000">+38 (000) 000-00-00</a>
+        </p>
+        <p>
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:example@email.com">example@email.com</a>
+        </p>
+        <p>
+            <i class="fas fa-clock"></i>
+            <strong class="yellow-text">График работы:</strong> <br>
+            <span class="yellow-text">Пн-Нд: 09:00-21:00</span> <br>
+            <span class="yellow-text">Без вихідних</span>
+        </p>
+    </div>
+    <div class="map-container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2247.578048429692!2d34.3689814!3d47.5740056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dca3f2cba46fe9%3A0x1cc89f1a55ed8620!2z0JrQsNC90LjRgtC10YHRgdC60LDRgtC-0YDQvtCw!5e0!3m2!1sru!2sua!4v1698020327760!5m2!1sru!2sua" 
+          width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+</div>
+</div>
+<div class="grid">
+      
+  <div class="gray-background">
+      <div>
+        <div class="header-navigation">
+            <!-- Мини-заголовок и слоган -->
+            <div class="mini-header">
+              <a href="homemenu.html" style="text-decoration: none;">
+                <h2>MemoryArt</h2>
+              </a>   
+            <div class="slogan">З турботою про важливе</div>
+            </div>
+            <!-- Навигация -->
+            <div class="navigation-and-catalog">
+            <div class="catalog-section">
+                <h3 class="navigation-title">Навігація</h3>
+                <nav class="navigation">
+                    <ul>
+                        <li><a href="pamytnyky.html">Пам'ятники</a></li>
+                        <li><a href="Vydygranity.html">Види граніту</a></li>
+                        <li><a href="acsesiris.html">Аксесуари та декор</a></li>
+                        <li><a href="nashiroboty.html">Наші роботи</a></li>
+                        <li><a href="memoryart.html">MemoryArt</a></li>
+                        <li><a href="dostavkaioplata.html">Доставка і оплата</a></li>
+                        <li><a href="putanny.html">Питання та відповіді</a></li>
+                        <li><a href="contacts.html">Контакти</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="catalog-section">
+                <h3 class="navigation-title">Каталог</h3>
+                <nav class="navigation">
+                    <ul>
+                        <li><a href="pamytnyky.html">Гранітні памятники:</a></li>
+                        <li><a href="Vydygranity.html">Для одного</a></li>
+                        <li><a href="acsesiris.html">Для двох</a></li>
+                        <li><a href="nashiroboty.html">Елітні меморіальні комплекси</a></li>
+                        <li><a href="memoryart.html">Для військових</a></li>
+                        <li><a href="dostavkaioplata.html">Фотоскло</a></li>
+                        <li><a href="putanny.html">Аксесуари і декор</a></li>
+                        <li><a href="putanny.html">Спеціальна пропозиція</a></li>
+                        <li><a href="contacts.html">Родинні</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="contact-panel">
+                <h3 class="navigation-title">Контакти</h3>
+                <nav class="contact-panel">
+                    <a href="https://maps.google.com/?q=ваш+адрес" class="map-link">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>На карте</span>
+                    </a>
+                    <a href="tel:+380123456789">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>+380 66 260 18 59</span>
+                    </a>
+                    <a href="frolovastesha7@gmail.com">
+                        <i class="fas fa-envelope"></i>
+                        <span>frolovastesha7@gmail.com</span>
+                    </a>
+                </nav>
+            </div>
+        </div>
+      </div>
+<div class="footer">
+    <hr class="footer-line">
+    <div class="footer-text">
+      <a href="polityka.html">Політика конфіденційності</a>
+      <span>© 2024 MemoryArt. Усі права захищено.</span>
+    </div>
+  </div>
+  </div>
+  <div id="scrollToTopBtn" class="scroll-to-top">
+    <i class="fas fa-arrow-up"></i> 
+  </div>
+  </body>
+  </body>
+  <script>
+function scrollGallery(offset) {
+    const gallery = document.querySelector('.gallery-wrapper');
+    gallery.scrollLeft += offset;
+}
+document.addEventListener("DOMContentLoaded", function () {
+    const body = document.querySelector("body");
+    body.classList.add("fade-in");
+    setTimeout(() => {
+        body.classList.add("visible");
+    }, 50); 
+});
+let lastScrollY = window.scrollY;
+window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('.navbar');
+    const header = document.querySelector('.my-header1');
+
+    if (navbar && header) {
+        if (window.scrollY > lastScrollY) {
+            navbar.classList.add('hidden');
+        } else {
+
+            navbar.classList.remove('hidden');
+        }
+    }
+
+    lastScrollY = window.scrollY;
+});
+
+let lastScrollTop = 0;
+const scrollToTopBtn = document.querySelector('.scroll-to-top');
+
+window.addEventListener('scroll', function () {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop > 300) {
+        if (scrollTop < lastScrollTop) {
+            scrollToTopBtn.classList.add('visible'); 
+        } else {
+            scrollToTopBtn.classList.remove('visible'); 
+        }
+    } else {
+        scrollToTopBtn.classList.remove('visible'); 
+    }
+
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; 
+});
+
+scrollToTopBtn.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const items = document.querySelectorAll('.advantage-item, .advantage-step');
+    const options = {
+        root: null,
+        threshold: 0.1,
+        rootMargin: '0px'
+    };
+    
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show'); 
+                observer.unobserve(entry.target); 
+            }
+        });
+    }, options);
+
+    items.forEach(item => {
+        observer.observe(item); 
+    });
+});
+
+</script>
+</html>

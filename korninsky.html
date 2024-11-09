@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MemoryArt</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+     body {
+        font-family: "Roboto", sans-serif;
+        background-color: black;
+        color: white;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        height: 100vh;
+      }
+
+      .product-container {
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.back-button {
+  margin-right: 10px;
+  font-size: 30px;
+  color: rgb(241, 219, 26);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  order: 0;
+}
+
+      .back-button svg {
+        width: 30px;
+        height: 30px;
+        fill: rgb(241, 219, 26);
+      }
+
+      .back-button:hover svg {
+        fill: #555;
+      }
+
+      .product-link {
+        flex-shrink: 0;
+        margin-right: 20px;
+        display: inline-block;
+        width: 300px;
+        height: 300px;
+        overflow: hidden;
+      }
+
+      .product-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        margin: 1em;
+        border-radius: 5px;
+        transition: transform 0.3s;
+      }
+
+      .product-link:hover .product-image {
+        transform: scale(1.05);
+      }
+
+      .product-description {
+        flex: 1;
+      }
+
+      .product-title {
+        font-family: "Great Vibes", sans-serif;
+        font-size: 36px;
+        color: rgb(241, 219, 26);
+        margin-bottom: 10px;
+        margin-top: 20px; 
+        transform: translateY(-10px);
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: opacity 1s ease, transform 1s ease;
+      }
+
+      .product-title.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .product-text {
+        font-family: "Nunito Sans", sans-serif;
+        font-size: 18px;
+        color: rgb(241, 219, 26);
+        line-height: 1.6;
+      }
+      @media (max-width: 768px) {
+  .product-container {
+    flex-direction: row; 
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .product-link {
+    width: 100%;
+    margin-right: 0;
+    order: 1; 
+    margin-bottom: 10px;
+  }і
+
+.back-button {
+    order: -1;
+    margin-bottom: 20px;
+  }
+
+  .product-description {
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+    order: 2; 
+  }
+      }
+      .top-header {
+        font-family: "Great Vibes", cursive;
+        color: rgb(241, 219, 26);
+        text-align: center;
+        font-size: 2.5em;
+        margin: 1;
+        padding-top: 11px;
+      }
+      .my-header1 {
+        font-family: "Great Vibes", cursive;
+        color: rgb(241, 219, 26);
+        text-align: center;
+        font-size: 6em;
+        background-image: url(lalalal.webp);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 20px 0;
+        margin: 0;
+        width: 100vw;
+        position: relative;
+      }
+
+      .new-section {
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: rgb(241, 219, 26);
+        text-align: center;
+        margin-top: 20px;
+      }
+      .new-section h2 {
+        font-family: "Anton" cursive;
+        font-size: 2.5em;
+        color: rgb(241, 219, 26);
+        margin: 0;
+      }
+      .social-icons {
+        position: absolute;
+        right: 20px;
+        transform: translateX(-50%);
+        top: 20px;
+        display: flex;
+        gap: 10px;
+      }
+      .button {
+        cursor: pointer;
+        text-decoration: none;
+        color: #ffff;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #2d2e32;
+        border: 2px solid #2d2e32;
+        transition: all 0.45s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .button:hover {
+        transform: rotate(360deg);
+        transform-origin: center center;
+        background-color: #ffff;
+        color: #2d2e32;
+      }
+      .button:hover .btn-svg {
+        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(305deg)
+          brightness(103%) contrast(103%);
+      }
+      .dropdown-menu {
+        background-color: rgba(0, 0, 0, 0.9);
+        border: none;
+        border-radius: 0;
+      }
+      .dropdown-item {
+        color: rgb(241, 219, 26);
+        padding: 10px 20px;
+      }
+      .dropdown-item:hover {
+        background-color: rgb(241, 219, 26);
+        color: black;
+      }
+      .navbar {
+        background-color: #443436;
+        padding: 15px 0;
+        width: 100%; 
+      }
+      .navbar-nav {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+      }
+      .navbar-nav .nav-link {
+        color: rgb(241, 219, 26) !important;
+        font-weight: bold;
+        text-transform: uppercase;
+        padding: 10px 20px;
+        text-align: center;
+        font-size: 1.2em;
+      }
+      .navbar-nav .nav-link:hover {
+        color: white !important;
+        background-color: rgb(241, 219, 26) !important;
+        border-radius: 5px;
+      }
+      .video-container {
+        position: relative;
+        width: 100%;
+        height: 60vh;
+        overflow: hidden;
+        margin-bottom: 20px;
+      }
+      .video-container video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .text-content {
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        transform: translateY(-50%);
+        text-align: left;
+        color: white;
+        width: 60%;
+      }
+      .text-content h2 {
+        font-family: "Archivo Black", sans-serif;
+        font-size: 2.5em;
+        color: rgb(241, 219, 26);
+        margin: 0;
+      }
+      .text-content p {
+        font-family: "Nunito Sans", sans-serif;
+        font-size: 1.1em;
+        line-height: 1.6em;
+        color: white;
+        margin: 10px 0 0;
+      }
+      button {
+        outline: none;
+        cursor: pointer;
+        border: none;
+        padding: 0.9rem 2rem;
+        margin: 10px 0 0;
+        font-family: inherit;
+        font-size: inherit;
+        position: relative;
+        display: flex;
+        letter-spacing: 0.05rem;
+        font-weight: 700;
+        font-size: 17px;
+        border-radius: 500px;
+        overflow: hidden;
+        background: rgb(241, 219, 26);
+        color: black;
+        align-items: center;
+        gap: 10px;
+      }
+      button:hover {
+        background: black;
+        color: white;
+      }
+
+      @media (max-width: 768px) {
+        .my-header1 {
+          font-size: 4em; 
+        }
+        .top-header {
+          font-size: 1.5em; 
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h2 class="top-header">З турботою про важливе</h2>
+    <h1 class="my-header1">
+      <a href="homemenu.html" style="color: rgb(241, 219, 26); text-decoration: none;">MemoryArt</a>
+    </h1>       
+    <!--navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav w-100">
+            <li class="nav-item">
+              <!--buttons in navbar-->
+              <a
+                class="flex-sm-fill text-sm-center nav-link active"
+                href="pamytnyky.html"
+                >Пам'ятники</a
+              >
+              <li class="nav-item">
+                <a class="nav-link" href="Vydygranity.html">Види граніту</a>
+              </li>
+            </li>
+            <li class="nav-item">
+              <a
+                class="flex-sm-fill text-sm-center nav-link active"
+                href="nashiroboty.html"
+                >Наші роботи</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Про нас
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="memoryart.html"
+                    >MemoryArt</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="dostavkaioplata.html"
+                    >Доставка та оплата</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="putanny.html"
+                    >Питання та відповіді</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contacts.html">Контакти</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+      <!--"Назад" у вигляді стрілочки -->
+      <div class="product-container">
+      <a href="Vydygranity.html" class="back-button">
+        <!--стрілка -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6z" />
+        </svg>
+      </a>
+      <!--опис-->
+      <a href="#" class="product-link">
+        <img src="maslovskij.webp" alt="tokovskiy" class="product-image" />
+      </a>
+      <div class="product-description">
+        <h2 class="product-title" id="title">Масловский граніт  </h2>
+        <p class="product-text">
+          <strong style="font-weight: bold; font-size: 2em;">Масловский граніт  (міжнародна назва -Verde Oliva)</strong>-видобувається в Україні. Кар'єр знаходиться у Житомирській обл., Володарськ-Волинському р-ні, за 30 кілометрів від залізничної станції Нова Борова та за 0,5 кілометра від села Суха Воля. Цей сорт граніту має відтінок зеленого кольору. Колір варіюється від оливкового до смарагдового з чорними та сірими вкрапленнями. 
+<br>
+          Камінь Масловського родовища водонепроникний, жаростійкий та стійкий до температурних перепадів. Маючи чудові фізичні характеристики, цей сорт граніту з успіхом застосовується при зовнішньому облицюванні фасадів та цоколів. Разом з тим, камінь має оригінальний колір і текстуру, що відрізняє його від інших гранітів, і, головне, він екологічно чистий, і може використовуватися у внутрішній обробці приміщень.
+          <br>
+          Масловский граніт чудово піддається обробці. З цього матеріалу виходить чудова гранітна плитка , бруківка, декоративні фонтани, кулі. Незамінний при облицюванні фасаду або ганку.
+        <p class="product-text">
+          <strong style="font-weight: bold; font-size: 1.5em;">Перевагою Масловського граніту є:</strong><br>
+          • Міцність; <br>
+          • Довговічність;<br>
+          • Волого- та термостійкість;<br>
+          • Зносостійкість та стійкість до подряпин;<br>
+          • Несприйнятливість до температурних перепадів;<br>
+          • Стійкість до ураження грибком.<br>
+          • Оригінальний колір
+        </p>
+        <p class="product-text">
+            Масловский граніт має 1 клас природної радіоактивності, що дозволяє його використовувати у будівництві без обмежень.
+        </p>        
+      </div>
+    </div>
+    <script>
+      window.onload = function () {
+        const title = document.getElementById("title");
+        title.classList.add("visible");
+      };
+    </script>
+  </body>
+</html>
