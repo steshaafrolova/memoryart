@@ -3,21 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Пам'ятники</title>
+    <title>MemoryArt</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link
       href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link
       href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link
       href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
       rel="stylesheet"
@@ -26,13 +25,13 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
       integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMzV06dD1d3a02LCx6VfS/A5G+e3er3tXjIoW"
       crossorigin="anonymous"
     />
-    
     <link href=https://fonts.google.com/specimen/Cormorant+Garamond
     rel="stylesheet" />
     <script
@@ -41,8 +40,8 @@
       crossorigin="anonymous"
     ></script>
     <style>
-          html {
-                                  scroll-behavior: smooth;
+    html {
+                               scroll-behavior: smooth;
                                 }
                                 body {
                                   font-family: "DM Serif Text", serif;
@@ -77,7 +76,7 @@
                                   color: rgb(241, 219, 26);
                                   text-align: center;
                                   font-size: 6em;
-                                  background-image: url(lalalal.webp);
+                                  background-image: url(/imges/lalalal.webp);
                                   background-size: cover;
                                   background-position: center;
                                   background-repeat: no-repeat;
@@ -90,7 +89,7 @@
                                   font-family: "Great Vibes", cursive;
                                   color: rgb(241, 219, 26);
                                   text-align: center;
-                                  font-size: 4em;
+                                  font-size: 3.4em;
                                   padding: 20px 0;
                                   margin: 0;
                                   width: 100vw;
@@ -168,7 +167,29 @@
                                   font-family: "Great Vibes", cursive;
                                   color: rgb(241, 219, 26);
                                   text-align: center;
+                                  font-size: 5em;
+                                  background-size: cover;
+                                  background-position: center;
+                                  padding: 20px 0;
+                                  margin: 0;
+                                  width: 100vw;
+                                }
+                                .my-header-chomy {
+                                  font-family: "Great Vibes", cursive;
+                                  color: rgb(241, 219, 26);
+                                  text-align: center;
                                   font-size: 4em;
+                                  background-size: cover;
+                                  background-position: center;
+                                  padding: 20px 0;
+                                  margin: 0;
+                                  width: 100vw;
+                                }
+                                .my-header-beremo {
+                                  font-family: "Great Vibes", cursive;
+                                  color: rgb(241, 219, 26);
+                                  text-align: center;
+                                  font-size: 3em;
                                   background-size: cover;
                                   background-position: center;
                                   padding: 20px 0;
@@ -327,6 +348,25 @@
                                   transform: skewX(-45deg) scale(0, 1);
                                   transition: all 0.5s;
                                 }
+                                .navbar, .my-header1 {
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.navbar.slide-up, .my-header1.slide-up {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.scroll-top-btn.visible {
+  display: block;
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.scroll-top-btn i {
+  color: #333; 
+  font-size: inherit; 
+}
 
                                 button:hover:after {
                                   transform: skewX(-45deg) scale(1, 1);
@@ -773,31 +813,271 @@
   text-decoration: underline;
 }
 
-.navbar, .my-header1 {
-  transition: transform 0.5s ease, opacity 0.5s ease;
+.gallery-wrapper {
+    overflow: hidden;
+}
+.accordion {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px 0;
+      }
+      .accordion-item {
+        width: 78%;
+        margin: 12px 0;
+        border: 1px solid rgba(241, 219, 26, 0.5);
+        border-radius: 10px;
+        overflow: hidden;
+        transition: background-color 0.3s;
+        background-color: rgba(0, 0, 0, 0.7);
+      }
+      .centered-text {
+  text-align: center;
+  font-size: 1.2em; 
+  color: rgb(241, 219, 26); 
+  margin-top: 20px; 
 }
 
-.navbar.slide-up, .my-header1.slide-up {
-  transform: translateY(-100%);
-  opacity: 0;
+.highlight {
+  color: rgb(241, 219, 26); 
+  font-weight: bold;
+  text-decoration: none; 
+  font-size: 1.5em; 
+}
+.bold-text {
+        font-weight: bold;
+    }
+    .large-bold-text {
+        font-size: 1.1em; 
+        font-weight: bold;
+    }
+    .first-letter {
+        font-family: "Great Vibes", cursive; 
+        font-size: 2em;
+    }
+    .custom-link {
+    color: inherit; 
+    text-decoration: none;
+    cursor: pointer; 
+}
+.hidden {
+    opacity: 0;
+    transform: translateY(30px); 
+    transition: opacity 0.7s ease, transform 0.7s ease; 
 }
 
-/* Начальное положение навбара под заголовком */
-.navbar {
-  position: sticky;
-  top: 0;
-  transition: transform 0.3s ease;
-  z-index: 1000;
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.header-navigation {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 70px;
+  margin-bottom: 40px;
+}
+@media (max-width: 1024px) { 
+    .header-navigation {
+        flex-direction: column;
+  }
 }
 
-/* Скрытие навбара при прокрутке вниз */
-.navbar.slide-up {
-  transform: translateY(-100%);
+@media (max-width: 1024px) { 
+    .header-navigation {
+    align-items: center;
+  }
 }
+
+.mini-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.mini-header h2 {
+  font-size: 35px;
+  color: rgb(241, 219, 26);
+  font-weight: bold;
+  margin: 0;
+  font-family: "Great Vibes", cursive;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.mini-header p {
+  font-size: 28px;
+  margin: 0;
+  color: rgb(241, 219, 26);
+  font-family: "Great Vibes", cursive;
+}
+
+.navigation-container {
+  text-align: center;
+}
+
+.navigation-title {
+  font-size: 35px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: rgb(241, 219, 26);
+  font-family: "Great Vibes", cursive;
+}
+
+.navigation ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation ul li {
+  margin-bottom: 15px;
+}
+
+.navigation ul li a {
+  text-decoration: none;
+  color: rgb(241, 219, 26);
+  font-size: 16px;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.navigation ul li a:hover {
+  text-decoration: underline;
+}
+
+.slogan {
+  text-align: center;
+  font-size: 1.5em;
+  color: rgb(241, 219, 26);
+  padding-bottom: 10px;
+  font-family: "Great Vibes", cursive;
+}
+
+.navigation-and-catalog {
+    display: grid;
+    place-content: center;
+    gap: 40px;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 1024px) { 
+  .navigation-and-catalog {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) { 
+  .navigation-and-catalog {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.navigation-section,
+.catalog-section {
+  flex: 1;
+  text-align: center;
+  margin: 0 10px;
+}
+
+.contact-panel {
+  display: flex;
+  color: rgb(241, 219, 26);
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.contact-panel a {
+  text-decoration: none;
+  color: rgb(241, 219, 26);
+  display: flex;
+  align-items: center;
+}
+
+.contact-panel i {
+  font-size: 1.2em;
+  margin-right: 5px;
+}
+.fade-in {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
+    .fade-in.visible {
+        opacity: 1;
+    }
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  box-sizing: border-box;
+}
+.footer-container {
+  background-color: #443436; 
+  color: #fff;
+  width: 100vw;
+  min-height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+@media (max-width: 768px) {
+  .footer-container {
+    background-color: #443436; 
+    padding: 20px;
+  }
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.footer-line {
+  width: 100%;
+  height: 1px;
+  background-color: #000000;
+  margin: 0;
+}
+
+.footer-text {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.footer-text a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-text a:hover {
+  text-decoration: underline;
+}
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+}
+
 
     </style>
   </head>
-  <body class="fade-in">
+  <body class="fade-in ">
     <h2 class="top-header">З турботою про важливе</h2>
     <h1 class="my-header1">
       <a
@@ -807,377 +1087,222 @@
       >
     </h1>
     <!--navbar-->
-    <nav class="navbar navbar-expand-lg navbar-dark">
-      <div class="container-fluid">
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav w-100">
-            <li class="nav-item">
-              <!--buttons in navbar-->
-              <a
-                class="flex-sm-fill text-sm-center nav-link"
-                href="pamytnyky.html"
-                >Пам'ятники</a
-              >
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <div class="container-fluid">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav w-100">
+        <li class="nav-item">
+          <!-- buttons in navbar -->
+          <a class="flex-sm-fill text-sm-center nav-link" href="pamytnyky.html">Пам'ятники</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Vydygranity.html">Види граніту</a>
+        </li>
+        <li class="nav-item">
+          <a class="flex-sm-fill text-sm-center nav-link" href="nashiroboty.html">Наші роботи</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-no-fade>
+            Про нас
+          </a>
+          <ul class="dropdown-menu" data-no-fade>
+            <li>
+              <a class="dropdown-item" href="memoryart.html" data-no-fade>MemoryArt</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Vydygranity.html">Види граніту</a>
+            <li>
+              <a class="dropdown-item" href="dostavkaioplata.html" data-no-fade>Доставка та оплата</a>
             </li>
-            <li class="nav-item">
-              <a
-                class="flex-sm-fill text-sm-center nav-link"
-                href="nashiroboty.html"
-                >Наші роботи</a
-              >
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-                >Про нас</a
-              >
-              <ul class="dropdown-menu">
-                <li>
-                  <a class="dropdown-item" href="memoryart.html">MemoryArt</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="dostavkaioplata.html"
-                    >Доставка та оплата</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="putanny.html"
-                    >Питання та відповіді</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contacts.html">Контакти</a>
+            <li>
+              <a class="dropdown-item" href="putanny.html" data-no-fade>Питання та відповіді</a>
             </li>
           </ul>
-        </div>
-      </div>
-    </nav>
-    <!--header-->
-    <h2 class="my-header22 fade-in-section">Пам'ятники із граніту</h2>
-    <!--opis-->
-    <section class="fade-in-section text-container">
-      <p class="fade-in">
-        <a href="homemenu.html" class="highlight1">П</a>ам'ятники з граніту, а
-        також інші види ритуальної продукції, виготовленої з натурального
-        каменю, пропонує компанія
-        <a href="homemenu.html" class="highlight">MemoryArt</a>. Нашим основним
-        напрямком є виготовлення пам'ятників різної складності та цілих
-        меморіальних комплексів. Ми працюємо за індивідуальними замовленнями та
-        типовими проектами. Надаємо послуги доставки гранітних пам'ятників з
-        наступним монтажем. Гарантуємо естетичний вигляд та високу якість
-        готової продукції. Виготовлення пам'ятників: особливості, види та
-        комплектація. У нашому каталозі представлений великий асортимент
-        продукції власного виробництва.
-      </p>
-      <button class="btn" id="readMoreBtn" onclick="toggleAdditionalText()">
-        Читати далі
-      </button>
-      <p id="additionalText" class="hidden">
-        <a href="homemenu.html" class="highlight1">Н</a>аші пам'ятники
-        встановлюються «на століття», оскільки всі деталі пам'ятника з граніту
-        з'єднуються сучасними матеріалами, що забезпечують довговічність
-        ритуальних комплексів. Граніт є натуральним природним каменем і має
-        відмінну міцність, морозостійкість та максимальну довговічність.
-        Надійність і довговічність граніту вже давно стала еталоном якості. Його
-        висока міцність у поєднанні з пластичністю дозволяє виготовляти вироби з
-        граніту будь-яких розмірів і форм. Виготовлення надгробків і ритуальних
-        комплексів з граніту — це вже не просто робота. Це свого роду мистецтво,
-        яке передбачає дизайнерський підхід і високу кваліфікацію виконавця.
-      </p>
-    </section>
-    <!-- Памятники -->
-    <div style="text-align: center">
-      <h1 class="my-header-pamytnyky fade-in-section">Види:</h1>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contacts.html">Контакти</a>
+        </li>
+      </ul>
     </div>
-    <div id="imagesSection">
-      <div class="menu">
-        <div class="menu-item">
-          <a href="#">
-            <img src="./imges/10-587-1.webp" alt="Image 1" />
-            <span class="menu-text">Для одного</span>
-          </a>
-        </div>
-        <div class="menu-item">
-          <a href="link2.html">
-            <img src="./imges/10-587-1.webp" alt="Image 2" />
-            <span class="menu-text">Для двох</span>
-          </a>
-        </div>
-        <div class="menu-item">
-          <a href="link3.html">
-            <img src="./imges/10-587-1.webp" alt="Image 3" />
-            <span class="menu-text">Для військових</span>
-          </a>
-        </div>
-        <div class="menu-item">
-          <a href="link4.html">
-            <img src="./imges/10-587-1.webp" alt="Image 4" />
-            <span class="menu-text">Елітні меморіальні комплекси</span>
-          </a>
-        </div>
-        <div class="menu-item">
-          <a href="link5.html">
-            <img src="./imges/10-587-1.webp" alt="Image 5" />
-            <span class="menu-text">Фотоскло</span>
-          </a>
-        </div>
-        <div class="menu-item">
-          <a href="link6.html">
-            <img src="./imges/10-587-1.webp" alt="Image 6" />
-            <span class="menu-text">Спеціальна пропозиція</span>
-          </a>
-        </div>
-        <div class="menu-item">
-          <a href="link7.html">
-            <img src="./imges/10-587-1.webp" alt="Image 7" />
-            <span class="menu-text">Родинні</span>
-          </a>
-        </div>
-        <div class="menu-item">
-          <a href="link8.html">
-            <img src="./imges/10-587-1.webp" alt="Image 8" />
-            <span class="menu-text">Аксесуари і декор</span>
-          </a>
-        </div>
-      </div>
- 
-      <div class="grid">
-      
-      <div class="gray-background">
-          <div>
-            <div class="header-navigation">
-                <!-- Мини-заголовок и слоган -->
-                <div class="mini-header">
-                  <a href="homemenu.html" style="text-decoration: none;">
-                    <h2>MemoryArt</h2>
-                  </a>   
-                <div class="slogan">З турботою про важливе</div>
-                </div>
-                <!-- Навигация -->
-                <div class="navigation-and-catalog">
-                <div class="catalog-section">
-                    <h3 class="navigation-title">Навігація</h3>
-                    <nav class="navigation">
-                        <ul>
-                            <li><a href="pamytnyky.html">Пам'ятники</a></li>
-                            <li><a href="Vydygranity.html">Види граніту</a></li>
-                            <li><a href="acsesiris.html">Аксесуари та декор</a></li>
-                            <li><a href="nashiroboty.html">Наші роботи</a></li>
-                            <li><a href="memoryart.html">MemoryArt</a></li>
-                            <li><a href="dostavkaioplata.html">Доставка і оплата</a></li>
-                            <li><a href="putanny.html">Питання та відповіді</a></li>
-                            <li><a href="contacts.html">Контакти</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="catalog-section">
-                    <h3 class="navigation-title">Каталог</h3>
-                    <nav class="navigation">
-                        <ul>
-                            <li><a href="pamytnyky.html">Гранітні памятники:</a></li>
-                            <li><a href="Vydygranity.html">Для одного</a></li>
-                            <li><a href="acsesiris.html">Для двох</a></li>
-                            <li><a href="nashiroboty.html">Елітні меморіальні комплекси</a></li>
-                            <li><a href="memoryart.html">Для військових</a></li>
-                            <li><a href="dostavkaioplata.html">Фотоскло</a></li>
-                            <li><a href="putanny.html">Аксесуари і декор</a></li>
-                            <li><a href="putanny.html">Спеціальна пропозиція</a></li>
-                            <li><a href="contacts.html">Родинні</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="contact-panel">
-                    <h3 class="navigation-title">Контакти</h3>
-                    <nav class="contact-panel">
-                        <a href="https://maps.google.com/?q=ваш+адрес" class="map-link">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>На карте</span>
-                        </a>
-                        <a href="tel:+380123456789">
-                            <i class="fas fa-phone-alt"></i>
-                            <span>+380 66 260 18 59</span>
-                        </a>
-                        <a href="frolovastesha7@gmail.com">
-                            <i class="fas fa-envelope"></i>
-                            <span>frolovastesha7@gmail.com</span>
-                        </a>
-                    </nav>
-                </div>
-            </div>
+  </div>
+</nav>
+<a href="homemenu.html" style="text-decoration: none; color: inherit;">
+  <h3 class="my-header-pamytnyky fade-in">MemoryArt</h3>
+</a>
+    <h4 class="my-header22 fade-in">Про компанію</h4>
+    <p class="centered-text fade-in">
+    Виготовлення гранітних пам'яток та цілих меморіальних комплексів є основним напрямом діяльності гранітного центру <a href="homemenu.html" class="highlight">«MemoryArt»</a>. 
+     <br> У нашому штаті працюють професійні дизайнери, художники та майстри з каменю. <br>
+      За плечима співробітників понад тисячу виконаних замовлень, що свідчить не лише про теоретичні знання, а й практичні навички, цінний досвід. <br>
+      <strong class="large-bold-text fade-in">
+        У нас завжди можна:
+        <br> • замовити одинарні, подвійні, ексклюзивні гранітні пам'ятники, а також дитячі моделі для сімейних поховань;
+        <br>• підібрати декоративні скульптури, фігури, вази;
+        <br>• вибрати варіанти класичних гравірованих портретів, фото на склі, епітафії;
+        <br>• доповнити місце поховання гранітним столом із лавкою, огорожею;
+        <br>• встановити цоколь та облицьувати ділянку плиткою.
+    </strong>
+    </p>
+    <p class="centered-text fade-in">
+     Не лише облаштування нових могил, а й реконструкція старих поховань входить до переліку наших послуг. 
+      <br>Ми оперативно та професійно впораємося з будь-яким завданням. Укладемо з вами офіційний договір та надамо гарантію на виконану роботу.
+    </p>
+    <p class="centered-text fade-in">
+      <span class="first-letter fade-in">Гранітні <a href="pamytnyky.html" class="custom-link">пам'ятники</a> власного виробництва – якість гарантується</span>
+    </p>
+    <p class="centered-text fade-in">
+     Ми не є новачками на ринку ритуальних послуг.<br> Професійно працюємо із гранітом різних порід. Постійно вдосконалюємо свої знання, стежимо за новими технологіями обробки каменю. А ще дуже тонко відчуваємо настрій кожного клієнта.
+      <br> Усією командою намагаємося, щоб готовий пам'ятник із граніту повністю відповідав очікуванням замовника.
+    </p>
+    <p class="centered-text fade-in">
+     у каталозі продукції  <a href="homemenu.html" class="highlight">MemoryArt</a> запропоновані доступні ціни на вироби з натурального каменю.<br> Ми витримуємо навіть найжорсткішу конкуренцію завдяки використанню української сировини високої якості, а також власному виробництву.<br> В асортименті маємо плити різних відтінків та розмірів.<br> Доставляємо та обробляємо слеби.<br> Займаємось художньо-декоративним оформленням гранітних пам'яток, надгробків, ваз, столів та лавок.
+    </p>
+   <p class="centered-text fade-in">
+  </div>
+  <p class="centered-text fade-in">
+    Для кожного замовлення в деталях розробляємо проект із кресленнями, комп'ютерними моделями у 2D/3D форматі.
+    <br> Абсолютно всі нюанси обговорюємо із клієнтами. Виключаємо недомовленості, недоліки, браку. 
+    <br>Завжди відповідаємо за якість виготовлених меморіальних комплексів.
+    <br> Обов'язково надаємо гарантії на вироби власного виробництва, їх монтаж та подальшу експлуатацію.
+  </p>
+   </p>
+ <h5 class="my-header-chomy fade-in">Чому з нами вигідно працювати?</h5>
+ <p class="centered-text fade-in">
+  Головний офіс гранітного центру <a href="homemenu.html" class="highlight fade-in">"MemoryArt"</a>знаходиться у Нікополі. Але замовлення на виробництво пам'ятників та інших виробів з натурального каменю ми приймаємо з усіх регіонів України. Як виробники, надаємо найнижчі ціни в області. 
+ </p>
+<p class="my-header-beremo fade-in">Беремо на себе:</p>
+<p class="centered-text fade-in">
+  • послугу зберігання готового меморіального комплексу абсолютно безкоштовно;<br>
+• доставку гранітних виробів на місце встановлення – спеціальним транспортом;<br>
+• монтаж гранітної пам'ятки, облицювання могили – виконуємо за власною технологією, яка набагато ефективніша, ніж пропонують конкуренти.
+</p>
+<p class="centered-text fade-in">
+  А ще ми займаємося благоустроєм могил «під ключ» із можливістю передоплати лише у 50%. 
+  Якщо ви замовляєте виготовлення гранітної пам'ятки + благоустрій, тоді можете заздалегідь внести не більше 30% від зазначеної у договорі суми. 
+  Залишок коштів заплатіть після того, як приймете роботу. 
+ <br> Оплату зможете внести будь-яким зручним способом, заздалегідь обговоривши цей момент менеджером <a href="homemenu.html" class="highlight">"MemoryArt"</a>.
+</p>
+<h6 class="my-header-chomy fade-in">Наші головні проекнти:</h6>
+<div class="menu fade-in">
+  <div class="menu-item fade-in">
+    <img src="/imges/55-photoaidcom-darken.webp" alt="Image 1">
+    <span  class="menu-text" >Алея слави місто Нікополь</span>
+  </div>
+  <div class="menu-item fade-in">
+    <img src="/imges/66-photoaidcom-darken.webp" alt="Image 2">
+    <span class="menu-text">Алея слави </span>
+  </div>
+  <div class="menu-item fade-in">
+    <img src="/imges/55-photoaidcom-darken.webp" alt="Image 3">
+    <span class="menu-text">Алея слави</span>
+  </div>
+  <div class="grid">
+    <div class="footer-container">
+        <div>
+          <div class="header-navigation">
+              <!-- Мини-заголовок и слоган -->
+              <div class="mini-header">
+                <a href="homemenu.html" style="text-decoration: none;">
+                  <h2>MemoryArt</h2>
+                </a>   
+              <div class="slogan">З турботою про важливе</div>
+              </div>
+              <!-- Навигация -->
+              <div class="navigation-and-catalog">
+              <div class="catalog-section">
+                  <h3 class="navigation-title">Навігація</h3>
+                  <nav class="navigation">
+                      <ul>
+                          <li><a href="pamytnyky.html">Пам'ятники</a></li>
+                          <li><a href="Vydygranity.html">Види граніту</a></li>
+                          <li><a href="acsesiris.html">Аксесуари та декор</a></li>
+                          <li><a href="nashiroboty.html">Наші роботи</a></li>
+                          <li><a href="memoryart.html">MemoryArt</a></li>
+                          <li><a href="dostavkaioplata.html">Доставка і оплата</a></li>
+                          <li><a href="putanny.html">Питання та відповіді</a></li>
+                          <li><a href="contacts.html">Контакти</a></li>
+                      </ul>
+                  </nav>
+              </div>
+              <div class="catalog-section">
+                  <h3 class="navigation-title">Каталог</h3>
+                  <nav class="navigation">
+                      <ul>
+                          <li><a href="pamytnyky.html">Гранітні памятники:</a></li>
+                          <li><a href="Vydygranity.html">Для одного</a></li>
+                          <li><a href="acsesiris.html">Для двох</a></li>
+                          <li><a href="nashiroboty.html">Елітні меморіальні комплекси</a></li>
+                          <li><a href="memoryart.html">Для військових</a></li>
+                          <li><a href="dostavkaioplata.html">Фотоскло</a></li>
+                          <li><a href="putanny.html">Аксесуари і декор</a></li>
+                          <li><a href="putanny.html">Спеціальна пропозиція</a></li>
+                          <li><a href="contacts.html">Родинні</a></li>
+                      </ul>
+                  </nav>
+              </div>
+              <div class="contact-panel">
+                  <h3 class="navigation-title">Контакти</h3>
+                  <nav class="contact-panel">
+                      <a href="https://maps.google.com/?q=ваш+адрес" class="map-link">
+                          <i class="fas fa-map-marker-alt"></i>
+                          <span>На карте</span>
+                      </a>
+                      <a href="tel:+380123456789">
+                          <i class="fas fa-phone-alt"></i>
+                          <span>+380 66 260 18 59</span>
+                      </a>
+                      <a href="frolovastesha7@gmail.com">
+                          <i class="fas fa-envelope"></i>
+                          <span>frolovastesha7@gmail.com</span>
+                      </a>
+                  </nav>
+              </div>
           </div>
-    <div class="footer">
-        <hr class="footer-line">
-        <div class="footer-text">
-          <a href="polityka.html">Політика конфіденційності</a>
-          <span>© 2024 MemoryArt. Усі права захищено.</span>
         </div>
+  <div class="footer">
+      <hr class="footer-line">
+      <div class="footer-text">
+        <a href="polityka.html">Політика конфіденційності</a>
+        <span>© 2024 MemoryArt. Усі права захищено.</span>
       </div>
-      </div>
-     
-</body>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const body = document.querySelector("body");
-      body.classList.add("fade-in");
-      setTimeout(() => {
-        body.classList.add("visible");
-      }, 50);
-    });
-    function handleScroll() {
-      const fadeInSection = document.querySelectorAll(".fade-in-section");
-      fadeInSection.forEach((section) => {
-        const sectionTop = section.getBoundingClientRect().top;
-        if (sectionTop < window.innerHeight * 0.9) {
-          section.classList.add("visible");
-        }
-      });
-    }
-    window.addEventListener("scroll", handleScroll);
-    handleScroll();
-    document.addEventListener("DOMContentLoaded", function () {
-      document.querySelector("body").classList.add("visible");
-    });
-
-    function showMoreText() {
-      const additionalText = document.getElementById("additionalText");
-      additionalText.classList.add("visible");
-    }
-    window.addEventListener("scroll", handleScroll);
-    handleScroll();
-    document.addEventListener("DOMContentLoaded", function () {
-      const fadeInSection = document.querySelector(".fade-in-section");
-      fadeInSection.classList.add("visible");
-    });
-    document.addEventListener("DOMContentLoaded", function () {
-      const granitHeader = document.querySelector(".my-header22");
-      setTimeout(() => {
-        granitHeader.classList.add("visible");
-      }, 1000);
-      const fadeInSections = document.querySelectorAll(".fade-in-title");
-      fadeInSections.forEach((section, index) => {
-        setTimeout(() => {
-          section.classList.add("visible");
-        }, 1500 + index * 500);
-      });
-    });
-    function showAdditionalText() {
-      document.getElementById("readMoreBtn").classList.add("hidden");
-      document.getElementById("additionalText").classList.remove("hidden");
-    }
-    function showAdditionalText() {
-      const additionalText = document.getElementById("additionalText");
-      additionalText.classList.add("visible");
-    }
-    document.addEventListener("DOMContentLoaded", function () {
-      document.querySelector("body").classList.add("visible");
-    });
-    document.addEventListener("DOMContentLoaded", function () {
-      const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
-
-      navLinks.forEach((link) => {
-        if (link.href === window.location.href) {
-          link.classList.add("active");
-        } else {
-          link.classList.remove("active");
-        }
-      });
-    });
-    document.addEventListener("DOMContentLoaded", function () {
-      document.querySelector("body").classList.add("fade-in");
-      setTimeout(() => {
-        document.querySelector("body").classList.add("visible");
-      }, 50);
-    });
-    function toggleAdditionalText() {
-      const additionalText = document.getElementById("additionalText");
-      additionalText.classList.toggle("visible");
-      additionalText.classList.toggle("hidden");
-      const readMoreBtn = document.getElementById("readMoreBtn");
-      if (additionalText.classList.contains("visible")) {
-        readMoreBtn.textContent = "Сховати";
-      } else {
-        readMoreBtn.textContent = "Читати далі";
-      }
-    }
-    window.addEventListener("scroll", function () {
-      document.querySelectorAll(".fade-in-section").forEach((section) => {
-        const sectionTop = section.getBoundingClientRect().top;
-        if (sectionTop < window.innerHeight * 0.9) {
-          section.classList.add("visible");
-        }
-      });
-    });
-    document.addEventListener("DOMContentLoaded", function () {
-      const fadeInElements = document.querySelectorAll(".fade-in");
-      fadeInElements.forEach((element, index) => {
-        setTimeout(() => {
-          element.classList.add("visible");
-        }, index * 300);
-      });
-      function handleScroll() {
-        fadeInElements.forEach((element) => {
-          const sectionTop = element.getBoundingClientRect().top;
-          if (sectionTop < window.innerHeight * 0.9) {
-            element.classList.add("visible");
-          }
-        });
-      }
-      window.addEventListener("scroll", handleScroll);
-      handleScroll();
-    });
-   
-
-  document.addEventListener("DOMContentLoaded", function () {
-  let lastScrollY = window.scrollY;
-  const navbar = document.querySelector(".navbar");
-  const header = document.querySelector(".my-header1");
+    </div>
+    </div>
   
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > lastScrollY) {
-      navbar.classList.add("slide-up");
-      header.classList.add("slide-up");
-    } else {
-      navbar.classList.remove("slide-up");
-      header.classList.remove("slide-up");
+  </body>
+</html>
+<script>
+  function scrollGallery(offset) {
+        const gallery = document.querySelector('.gallery-wrapper');
+        gallery.scrollLeft += offset;
     }
-    lastScrollY = window.scrollY;
+    document.addEventListener("DOMContentLoaded", function () {
+    const body = document.querySelector("body");
+    body.classList.add("fade-in");
+    setTimeout(() => {
+      body.classList.add("visible");
+    }, 50); 
   });
-});
-document.addEventListener("DOMContentLoaded", function () {
-  let lastScrollY = window.scrollY;
-  const navbar = document.querySelector(".navbar");
+  document.addEventListener("DOMContentLoaded", function () {
+        const fadeElements = document.querySelectorAll(".fade-in");
 
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > lastScrollY) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                }
+            });
+        }, { threshold: 0.1 }); 
 
-      navbar.classList.add("slide-up");
-    } else {
-
-      navbar.classList.remove("slide-up");
-    }
-
-    lastScrollY = window.scrollY;
-  });
-});
+        fadeElements.forEach(el => observer.observe(el));
+    });
   </script>
 </html>

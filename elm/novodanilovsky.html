@@ -25,7 +25,7 @@
       rel="stylesheet"
     />
     <style>
-      body {
+     body {
         font-family: "Roboto", sans-serif;
         background-color: black;
         color: white;
@@ -33,28 +33,28 @@
         padding: 0;
         overflow-x: hidden;
         display: flex;
-        flex-direction: column;
+        flex-direction: column; 
         align-items: center;
         height: 100vh;
       }
 
       .product-container {
-        display: flex;
-        align-items: center;
-        padding: 0 5%;
-        width: 100%;
-        box-sizing: border-box;
-      }
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
+  width: 100%;
+  box-sizing: border-box;
+}
 
-      .back-button {
-        margin-right: 10px;
-        font-size: 30px;
-        color: rgb(241, 219, 26);
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-        order: 0;
-      }
+.back-button {
+  margin-right: 10px;
+  font-size: 30px;
+  color: rgb(241, 219, 26);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  order: 0;
+}
 
       .back-button svg {
         width: 30px;
@@ -97,7 +97,7 @@
         font-size: 36px;
         color: rgb(241, 219, 26);
         margin-bottom: 10px;
-        margin-top: 20px;
+        margin-top: 20px; 
         transform: translateY(-10px);
         opacity: 0;
         transform: translateY(-20px);
@@ -116,29 +116,30 @@
         line-height: 1.6;
       }
       @media (max-width: 768px) {
-        .product-container {
-          flex-direction: row;
-          align-items: flex-start;
-          flex-wrap: wrap;
-        }
+  .product-container {
+    flex-direction: row; 
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
 
-        .product-link {
-          width: 100%;
-          margin-right: 0;
-          order: 1;
-          margin-bottom: 10px;
-        }
-        і .back-button {
-          order: -1;
-          margin-bottom: 20px;
-        }
+  .product-link {
+    width: 100%;
+    margin-right: 0;
+    order: 1; 
+    margin-bottom: 10px;
+  }і
 
-        .product-description {
-          width: 100%;
-          margin-top: 10px;
-          text-align: center;
-          order: 2;
-        }
+.back-button {
+    order: -1;
+    margin-bottom: 20px;
+  }
+
+  .product-description {
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+    order: 2; 
+  }
       }
       .top-header {
         font-family: "Great Vibes", cursive;
@@ -153,7 +154,7 @@
         color: rgb(241, 219, 26);
         text-align: center;
         font-size: 6em;
-        background-image: url(lalalal.webp);
+        background-image: url(/imges/lalalal.webp);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -224,7 +225,7 @@
       .navbar {
         background-color: #443436;
         padding: 15px 0;
-        width: 100%;
+        width: 100%; 
       }
       .navbar-nav {
         display: flex;
@@ -308,138 +309,108 @@
 
       @media (max-width: 768px) {
         .my-header1 {
-          font-size: 4em;
+          font-size: 4em; 
         }
         .top-header {
-          font-size: 1.5em;
+          font-size: 1.5em; 
         }
-      }
-      .navbar-hidden {
-        transform: translateY(-100%);
-        transition: transform 0.3s ease-in-out;
-      }
-      .navbar-shown {
-        transform: translateY(0);
-        transition: transform 0.3s ease-in-out;
-      }
-
-      .header-hidden {
-        transform: translateY(-100%);
-        transition: transform 0.3s ease-in-out;
-      }
-
-      .header-shown {
-        transform: translateY(0);
-        transition: transform 0.3s ease-in-out;
       }
       .fade-in {
-        opacity: 0;
-        animation: fadeInAnimation 0.5s forwards;
-      }
+    opacity: 0;
+    animation: fadeInAnimation 0.5s forwards;
+}
 
-      .fade-out {
-        opacity: 1;
-        animation: fadeOutAnimation 0.5s forwards;
-      }
-      @keyframes fadeInAnimation {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
-      }
+.fade-out {
+    opacity: 1;
+    animation: fadeOutAnimation 0.5s forwards;
+}
+@keyframes fadeInAnimation {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
 
-      @keyframes fadeOutAnimation {
-        from {
-          opacity: 1;
-        }
-        to {
-          opacity: 0;
-        }
-      }
-      .navigation-button {
-        font-size: 30px;
-        color: rgb(241, 219, 26);
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-      }
-      .navigation-button:hover svg {
-        fill: #555;
-      }
-      .navigation-button svg {
-        width: 40px;
-        height: 40px;
-        fill: rgb(241, 219, 26);
-        transition: transform 0.3s;
-      }
-      .navigation-button:hover svg {
-        transform: scale(1.2);
-      }
-      .navigation-button {
-        font-size: 30px;
-        color: rgb(241, 219, 26);
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-        margin-top: 20px;
-      }
+@keyframes fadeOutAnimation {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+    .navigation-button {
+      font-size: 30px;
+      color: rgb(241, 219, 26);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+    }
+    .navigation-button:hover svg {
+      fill: #555;
+    }
+    .navigation-button svg {
+      width: 40px;
+      height: 40px;
+      fill: rgb(241, 219, 26);
+      transition: transform 0.3s;
+    }
+    .navigation-button:hover svg {
+      transform: scale(1.2);
+    }
+    .navigation-button {
+  font-size: 30px;
+  color: rgb(241, 219, 26);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  margin-top: 20px; 
+}
 
-      .navigation-button svg {
-        width: 45px;
-        height: 45px;
-        fill: rgb(241, 219, 26);
-        transition: transform 0.3s, fill 0.3s;
-        margin-right: 15px;
-      }
+.navigation-button svg {
+  width: 45px;
+  height: 45px;
+  fill: rgb(241, 219, 26);
+  transition: transform 0.3s, fill 0.3s;
+  margin-right: 15px;
+}
 
-      .navigation-button:hover svg {
-        transform: scale(1.2);
-        fill: white;
-      }
-      .product-navigation {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 20px 0;
-      }
+.navigation-button:hover svg {
+  transform: scale(1.2);
+  fill: white; 
+}
+.product-navigation {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    margin: 20px 0; 
+}
 
-      .product-title {
-        font-family: "Great Vibes", sans-serif;
-        font-size: 36px;
-        color: rgb(241, 219, 26);
-        margin-bottom: 10px;
-        margin-top: 20px;
-        transform: translateY(-10px);
-        opacity: 0;
-        transition: opacity 1s ease, transform 1s ease;
-      }
+.product-title {
+    font-family: "Great Vibes", sans-serif; 
+    font-size: 36px; 
+    color: rgb(241, 219, 26); 
+    margin-bottom: 10px; 
+    margin-top: 20px; 
+    transform: translateY(-10px); 
+    opacity: 0; 
+    transition: opacity 1s ease, transform 1s ease;
+}
 
-      .arrow {
-        font-size: 36px;
-        color: rgb(241, 219, 26);
-        text-decoration: none;
-        margin: 0 20px;
-        transition: color 0.3s;
-      }
+.arrow {
+    font-size: 36px; 
+    color: rgb(241, 219, 26); 
+    text-decoration: none; 
+    margin: 0 20px; 
+    transition: color 0.3s; 
+}
 
-      .arrow:hover {
-        color: #8a8282;
-      }
+.arrow:hover {
+    color: #8a8282;
+}
     </style>
   </head>
   <body class="fade-in">
     <h2 class="top-header">З турботою про важливе</h2>
     <h1 class="my-header1">
-      <a
-        href="homemenu.html"
-        style="color: rgb(241, 219, 26); text-decoration: none"
-        >MemoryArt</a
-      >
-    </h1>
+      <a href="homemenu.html" style="color: rgb(241, 219, 26); text-decoration: none;">MemoryArt</a>
+    </h1>       
     <!--navbar-->
-    <nav class="navbar navbar-expand-lg navbar-dark navbar-shown">
+    <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container-fluid">
         <button
           class="navbar-toggler"
@@ -455,6 +426,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav w-100">
             <li class="nav-item">
+              <!--buttons in navbar-->
                <!-- buttons in navbar -->
 <a class="flex-sm-fill text-sm-center nav-link active" href="pamytnyky.html">Пам'ятники</a>
 <li class="nav-item">
@@ -485,83 +457,68 @@
         </div>
       </div>
     </nav>
-    <div class="product-container">
+      <!--"Назад" у вигляді стрілочки -->
+      <div class="product-container">
       <a href="Vydygranity.html" class="back-button">
+        <!--стрілка -->
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
           <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6z" />
         </svg>
       </a>
       <!--опис-->
       <a href="#" class="product-link">
-        <img
-          src="./imges/lukovetskiy-green.webp"
-          alt="tokovskiy"
-          class="product-image"
-        />
+        <img src="/imges/novodanilovsky.jpg" alt="tokovskiy" class="product-image" />
       </a>
-      <!--заголовок и стрелки-->
       <div class="product-description">
         <div class="product-navigation">
-          <a href="vasilskoe.html" class="arrow left-arrow">&#8592;</a>
-          <!-- Стрелка влево -->
-          <h2 class="product-title" id="title">Луковецьке габбро-анортозит</h2>
-          <a href="kamenobrodske.html" class="arrow right-arrow">&#8594;</a>
-          <!-- Стрелка вправо -->
-        </div>
+          <a href="volgablue.html" class="arrow left-arrow">&#8592;</a> <!-- Стрелка влево -->
+          <h2 class="product-title" id="title">Новоданиловский</h2>
+          <a href="kApystsky.html" class="arrow right-arrow">&#8594;</a> <!-- Стрелка вправо -->
+      </div>     
         <p class="product-text">
-          <strong style="font-weight: bold; font-size: 2em"
-            >Луковецьке габбро-анортозит(Lukovetske)</strong
-          >-це глибокий чорний камінь із синіми вкрапленнями, що створює ефект
-          «нічного неба». Він має надзвичайну міцність і підходить для
-          використання в архітектурі та декорі. Цей камінь додає строгості та
-          елегантності будь-якому проєкту.
-        </p>
-
-        <p class="product-text">
-          <strong style="font-weight: bold; font-size: 1.5em"
-            >Переваги Васильєвського граніту:</strong
-          ><br />
-          • Глибокий чорний колір із синіми відблисками<br />
-          •Висока зносостійкість і міцність<br />
-          •Волого- та термостійкість<br />
-          •Несприйнятливість до подряпин<br />
-          •Екологічно чистий
+          <strong style="font-weight: bold; font-size: 2em;">Новоданиловский(міжнародна назва - Withered)</strong>видобувається в Україні. Кар'єр розташований біля с. Новоданилівка, Казанківського району, Миколаївської області. Має зернисту текстуру із червоно-чорними включеннями. У полірованому вигляді переважає червоний колір, що робить його популярним, як оздоблювальний матеріал для внутрішньої та зовнішньої обробки. Застосовується в будівництві як облицювальна плитка, елементи мощення типу бруківки та тротуарної плитки, архітектурні елементи, такі як колони, балясини, кулі. 
         </p>
         <p class="product-text">
-          Луковецький габбро-анортозит має 1 клас природної радіоактивності, що
-          дозволяє його використовувати у будівництві без обмежень.
+          <strong style="font-weight: bold; font-size: 1.5em;">Перевагою Новоданиловського граніту є:</strong><br>
+          • Висока механічна міцність, що забезпечує довговічність.<br>
+          •Стійкість до стирання та погодних впливів.<br>
+          •Яскравий червоний колір з теплими відтінками.<br>
+          •Легкість у догляді та невибагливість в експлуатації.
         </p>
+        <p class="product-text">
+          Ця порода каменю відноситься до 2 класу радіоактивності, що дозволяє його використовувати для зовнішньої обробки та відкритих площ.
+        </p>        
       </div>
     </div>
     <script>
-      window.onload = function () {
-        document.body.classList.add("fade-in");
-        const title = document.getElementById("title");
-        title.classList.add("visible");
-      };
+     window.onload = function () {
+    document.body.classList.add('fade-in');
+    const title = document.getElementById("title");
+    title.classList.add("visible");
+};
 
-      function navigate(event) {
-        event.preventDefault();
-        document.body.classList.add("fade-out");
-        setTimeout(() => {
-          window.location.href = event.currentTarget.getAttribute("href");
-        }, 500);
-      }
-      document.addEventListener("DOMContentLoaded", function () {
-        document.querySelectorAll("a").forEach((link) => {
-          link.addEventListener("click", function (event) {
-            if (!this.hasAttribute("data-no-fade")) {
-              event.preventDefault();
-              document.body.classList.add("fade-out");
-              setTimeout(() => {
-                window.location = this.href;
-              }, 500);
+function navigate(event) {
+    event.preventDefault();
+    document.body.classList.add("fade-out");
+    setTimeout(() => {
+        window.location.href = event.currentTarget.getAttribute("href");
+    }, 500);
+}
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", function (event) {
+            if (!this.hasAttribute('data-no-fade')) {
+                event.preventDefault();
+                document.body.classList.add('fade-out');
+                setTimeout(() => {
+                    window.location = this.href;
+                }, 500);
             }
-          });
         });
-      });
+    });
+});
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
   </body>
 </html>
