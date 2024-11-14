@@ -45,7 +45,7 @@
         scroll-behavior: smooth;
       }
       body {
-        font-family: "Roboto", sans-serif;
+        background-image: url(/imges/ббб.webp);
         background-color: black;
         color: white;
         margin: 0;
@@ -59,20 +59,27 @@
 .fade-in.visible {
   opacity: 1;
 }
-      .top-header {
-        font-family: "Great Vibes", cursive;
-        color: rgb(241, 219, 26);
-        text-align: center;
-        font-size: 2.5em;
-        margin: 1;
-        padding-top: 11px;
-      }
+.top-header {
+    font-family: "Great Vibes", cursive;
+    color: rgb(241, 219, 26);
+    text-align: center;
+    background-image: url(/imges/ll.avif);
+    font-size: 2.5em;
+    margin: 0;
+    padding: 10px 0;
+    line-height: 1.2; 
+    background-size: cover; 
+    background-position: center;
+    overflow: hidden;
+}
+
+
       .my-header1 {
         font-family: "Great Vibes", cursive;
         color: rgb(241, 219, 26);
         text-align: center;
         font-size: 6em;
-        background-image: url(/imges/lalalal.webp);
+        background-image: url(/imges/ббб.webp);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -690,11 +697,38 @@
 a {
   text-decoration: none;
 }
+.gold-frame {
+  border: 5px solid gold;        
+  padding: 5px;                 
+  box-shadow: 0 0 10px rgba(255, 223, 0, 0.7); }
+  .mini-header {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.my-header-pamytnyky {
+  font-family: "Great Vibes", cursive;
+ color: rgb(241, 219, 26);
+   text-align: center;
+ font-size: 5em;
+  background-size: cover;
+  background-position: center;
+  padding: 20px 0;
+   margin: 0;
+   width: 100vw;
+  animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
 
     </style>
   </head>
   <body class="fade-in">
-    <h2 class="top-header">З турботою про важливе</h2>
+    <h2 class="top-header">З турботою про головне</h2>
     <h1 class="my-header1">
       <a
         href="homemenu.html"
@@ -751,149 +785,167 @@ a {
       </div>
     </nav>
     <!--header-->
-    <h2 class="my-header22 fade-in-section">Види граніту:</h2>
+    <div class="mini-header">
+      <h3 class="my-header-pamytnyky fade-in">Види граніту</h3>
+    </div>
+    
     <!--vydy-->
     <div class="menu-section">
       <div class="menu-item">
-        <img src="/imges/tokovskiy.webp" alt="tokovskiy" />
+        <img src="/imges/tokovskiy.webp" alt="tokovskiy" class="gold-frame" />
         <div class="menu-text">
           <a href="tokovsky.html"><strong>Токовський<br />(Carpazi)</strong></a>
         </div>
       </div>
+    
       <div class="menu-item">
-        <img src="/imges/labradorit.webp" alt="image1" />
+        <img src="/imges/labradorit.webp" alt="image1" class="gold-frame" />
         <div class="menu-text">
           <a href="extrablue.html"><strong>Лабрадорит<br />(EXTRA BLUE)</strong></a>
         </div>
       </div>
+    
       <div class="menu-item">
-        <img src="/imges/Volga-Blue-Extra-300x300.webp" alt="image2" />
+        <img src="/imges/Volga-Blue-Extra-300x300.webp" alt="image2" class="gold-frame" />
         <div class="menu-text">
-          <a href="volgablue.html"><strong>Лабродарит<br />(VOLGA BLUE) </strong></a>
+          <a href="volgablue.html"><strong>Лабродарит<br />(VOLGA BLUE)</strong></a>
         </div>
       </div>
+    
       <div class="menu-item">
-        <img src="/imges/novodanilovsky.jpg" alt="image3" />
+        <img src="/imges/novodanilovsky.jpg" alt="image3" class="gold-frame" />
         <div class="menu-text">
           <a href="novodanilovsky.html"><strong>Новоданиловський<br />(Withered)</strong></a>
         </div>
       </div>
+    
       <div class="menu-item">
-        <img src="/imges/kapesnskiy.webp" alt="image4" />
+        <img src="/imges/kapesnskiy.webp" alt="image4" class="gold-frame" />
         <div class="menu-text">
           <a href="kApystsky.html"><strong>Капустинський<br />(Rosso Santiago)</strong></a>
         </div>
       </div>
+    
       <div class="menu-item">
-        <img src="/imges/sophiyvsky-texture.webp" alt="image5" />
+        <img src="/imges/sophiyvsky-texture.webp" alt="image5" class="gold-frame" />
         <div class="menu-text">
           <a href="sofiya.html"><strong>Софіївський<br />(Sophiyvsky)</strong></a>
         </div>
       </div>
+    
       <div class="menu-item">
-        <img src="/imges/jancevsky.jpg" alt="image5" />
+        <img src="/imges/jancevsky.jpg" alt="image5" class="gold-frame" />
         <div class="menu-text">
           <a href="jancevsky.html"><strong>Янцевський<br />(REAL GREY)</strong></a>
         </div>
       </div>
+    
       <div class="menu-item">
-        <img src="/imges/pokostovsky.webp" alt="image5" />
+        <img src="/imges/pokostovsky.webp" alt="image5" class="gold-frame" />
         <div class="menu-text">
           <a href="pokostovsky.html"><strong>Покостовський<br />(Gray Ukraine)</strong></a>
         </div>
       </div>
+    
       <div class="menu-item">
-        <img src="/imges/mezdunarod.webp" alt="image5" />
+        <img src="/imges/mezdunarod.webp" alt="image5" class="gold-frame" />
         <div class="menu-text">
           <a href="mizdynarod.html"><strong>Междуреченський<br />(Flower of Ukraine)</strong></a>
         </div>
       </div>
+    
       <div class="menu-item">
-        <img src="/imges/konstantinvsky.webp" alt="image5" />
+        <img src="/imges/konstantinvsky.webp" alt="image5" class="gold-frame" />
         <div class="menu-text">
           <a href="knstantinovsky.html"><strong>Константиновський<br />(GG8 Kostyantynivsky)</strong></a>
         </div>
       </div>
+    
       <div class="menu-item">
-        <img src="/imges/maslovskij.webp" alt="image5" />
+        <img src="/imges/maslovskij.webp" alt="image5" class="gold-frame" />
         <div class="menu-text">
           <a href="maslovsky.html"><strong>Масловський<br />(Verde Oliva)</strong></a>
         </div>
       </div>
+    
       <div class="menu-item">
-        <img src="/imges/tanskiy.webp" alt="image5" />
+        <img src="/imges/tanskiy.webp" alt="image5" class="gold-frame" />
         <div class="menu-text">
           <a href="tanskiy.html"><strong>Танський<br />(Tansky)</strong></a>
         </div>
       </div>
+    
       <div class="menu-item">
-        <img src="/imges/Gabbro.webp" alt="image5" />
+        <img src="/imges/Gabbro.webp" alt="image5" class="gold-frame" />
         <div class="menu-text">
           <a href="gabbo.html"><strong>Габбро<br />(Bukins)</strong></a>
         </div>
       </div>
+    
       <div class="menu-item">
-        <img src="/imges/Leopard.webp" alt="image5" />
+        <img src="/imges/Leopard.webp" alt="image5" class="gold-frame" />
         <div class="menu-text">
           <a href="leopard.html"><strong>Корнинське<br />(Leopard)</strong></a>
         </div>
       </div>
+    
       <div class="menu-item">
-        <img src="/imges/starobabanskiy.webp" alt="image5" />
+        <img src="/imges/starobabanskiy.webp" alt="image5" class="gold-frame" />
         <div class="menu-text">
           <a href="starbobanske.html"><strong>Старобабанське<br />(Pink Grey)</strong></a>
         </div>
       </div>
+    
       <div class="menu-item">
-        <img src="/imges/Marple-Red.webp" alt="image5" />
+        <img src="/imges/Marple-Red.webp" alt="image5" class="gold-frame" />
         <div class="menu-text">
           <a href="marplered.html"><strong>Лезниковське<br />(Maple-Red)</strong></a>
         </div>
       </div>
+    
       <div class="menu-item">
-        <img src="/imges/Rosso-Toledo.webp" alt="image5" />
+        <img src="/imges/Rosso-Toledo.webp" alt="image5" class="gold-frame" />
         <div class="menu-text">
           <a href="emilyanskoe.html"><strong>Ємільянське<br />(Rosso Toledo)</strong></a>
         </div>
       </div>
+    
       <div class="menu-item">
-        <img src="/imges/didcovsky.webp" alt="image5" />
+        <img src="/imges/didcovsky.webp" alt="image5" class="gold-frame" />
         <div class="menu-text">
-          <a href="didkovske.html"><strong>Дідковицьке<br>(Star of Ukraine)
-          </strong></a>
+          <a href="didkovske.html"><strong>Дідковицьке<br>(Star of Ukraine)</strong></a>
         </div>
       </div>
+    
       <div class="menu-item">
-        <img src="/imges/zhadkovskiy.webp" alt="image5" />
+        <img src="/imges/zhadkovskiy.webp" alt="image5" class="gold-frame" />
         <div class="menu-text">
           <a href="jidkovitske.html"><strong>Жадковське<br>(Rosa Raveno)</strong></a>
         </div>
       </div>
+    
       <div class="menu-item">
-        <img src="/imges/vasilievskiy.webp" alt="image5" />
+        <img src="/imges/vasilievskiy.webp" alt="image5" class="gold-frame" />
         <div class="menu-text">
           <a href="vasilskoe.html"><strong>Васильовське<br> (Ukraine Autumn)</strong></a>
         </div>
       </div>
+    
       <div class="menu-item">
-        <img src="/imges/lukovetskiy-green.webp" alt="image5" />
+        <img src="/imges/lukovetskiy-green.webp" alt="image5" class="gold-frame" />
         <div class="menu-text">
-          <a href="lukovetsske.html"><strong>Луковецьке<br>
-           <br> Габбро-анортозит (Lukovetske)
-            </strong></a>
+          <a href="lukovetsske.html"><strong>Луковецьке<br>Габбро-анортозит (Lukovetske)</strong></a>
         </div>
       </div>
+    
       <div class="menu-item">
-        <img src="/imges/kamenobrodskiy-labradorit.webp" alt="image5" />
+        <img src="/imges/kamenobrodskiy-labradorit.webp" alt="image5" class="gold-frame" />
         <div class="menu-text">
-          <a href="kamenobrodske.html"><strong>Каменобродське<br>(Ukraine Night)
-            </strong></a>
+          <a href="kamenobrodske.html"><strong>Каменобродське<br>(Ukraine Night)</strong></a>
         </div>
       </div>
-    </div>
     </div>
     <div class="grid">
-      
       <div class="gray-background">
           <div>
             <div class="header-navigation">
@@ -902,20 +954,19 @@ a {
                   <a href="homemenu.html" style="text-decoration: none;">
                     <h2>MemoryArt</h2>
                   </a>                  
-                <div class="slogan">З турботою про важливе</div>
+                <div class="slogan">З турботою про головне</div>
                 </div>
-                <!-- Навигация -->
                 <!-- Навигация -->
                 <div class="navigation-and-catalog">
                 <div class="catalog-section">
                     <h3 class="navigation-title">Навігація</h3>
                     <nav class="navigation">
                         <ul>
+                          <li><a href="memoryart.html">MemoryArt</a></li>
                             <li><a href="pamytnyky.html">Пам'ятники</a></li>
                             <li><a href="Vydygranity.html">Види граніту</a></li>
                             <li><a href="acsesiris.html">Аксесуари та декор</a></li>
                             <li><a href="nashiroboty.html">Наші роботи</a></li>
-                            <li><a href="memoryart.html">MemoryArt</a></li>
                             <li><a href="dostavkaioplata.html">Доставка і оплата</a></li>
                             <li><a href="putanny.html">Питання та відповіді</a></li>
                             <li><a href="contacts.html">Контакти</a></li>
@@ -941,10 +992,10 @@ a {
                 <div class="contact-panel">
                     <h3 class="navigation-title">Контакти</h3>
                     <nav class="contact-panel">
-                        <a href="https://maps.google.com/?q=ваш+адрес" class="map-link">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>На карте</span>
-                        </a>
+                      <a href="https://maps.app.goo.gl/mQwk5qb4wDtrGSRQ9  " target="_blank"  class="map-link">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>  проспект Трубників, 7 а. м. Нікополь <br> Дніпропетровська область, 53200</span>
+                    </a>
                         <a href="tel:+380123456789">
                             <i class="fas fa-phone-alt"></i>
                             <span>+380 66 260 18 59</span>
