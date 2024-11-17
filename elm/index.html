@@ -439,7 +439,10 @@
     white-space: nowrap;
     scroll-behavior: smooth;
     padding: 10px 0;
-    max-width: 900px; /
+    overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+    max-width: 900px; 
 }
 .gallery-items {
     display: flex;
@@ -1520,6 +1523,32 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(item); 
     });
 });
+const galleryWrapper = document.querySelector('.gallery-wrapper');
+const galleryItems = document.querySelector('.gallery-items');
+
+let startX = 0;
+let isDragging = false;
+let scrollLeft = 0;
+
+galleryWrapper.addEventListener('touchstart', (event) => {
+  startX = event.touches[0].pageX; // Начальная точка касания
+  scrollLeft = galleryWrapper.scrollLeft; // Текущее положение прокрутки
+  isDragging = true;
+});
+
+galleryWrapper.addEventListener('touchmove', (event) => {
+  if (!isDragging) return;
+  const x = event.touches[0].pageX; // Текущая точка касания
+  const walk = startX - x; // Расстояние свайпа
+  galleryWrapper.scrollLeft = scrollLeft + walk; // Обновление позиции прокрутки
+});
+
+galleryWrapper.addEventListener('touchend', () => {
+  isDragging = false;
+});
+function scrollGallery(offset) {
+  galleryWrapper.scrollLeft += offset;
+}
 
 </script>
 </html>
