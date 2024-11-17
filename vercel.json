@@ -1,0 +1,15 @@
+{
+     "redirects": [
+          {
+               "source": "/",
+               "destination": "/elm/index.html",
+               "permanent": true
+          }
+     ],
+     "rewrites": [
+          {
+               "source": "/:path*",
+               "destination": "/elm/index.html"
+          }
+     ]
+}   
