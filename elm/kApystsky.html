@@ -322,7 +322,7 @@
 
 .fade-out {
     opacity: 1;
-    animation: fadeOutAnimation 0.5s forwards;
+    animation: fadeInAnimation 0.3s forwards;
 }
 @keyframes fadeInAnimation {
     from { opacity: 0; }
@@ -402,6 +402,16 @@
 .arrow:hover {
     color: #8a8282;
 }
+body.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+body.fade-in {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
     </style>
   </head>
   <body class="fade-in">
@@ -472,7 +482,7 @@
           <a href="/elm/sofiya.html" class="arrow right-arrow">&#8594;</a> <!-- Стрелка вправо -->
       </div>     
         <p class="product-text">
-          <strong style="font-weight: bold; font-size: 2em;">Капустинский(міжнародна назва -Rosso Santiago)</strong> видобувається в Україні. Кар'єр розташований в районі залізничної станції Капустине, Кіровоградської області. Один із найпопулярніших сортів червоного граніту. Має крупнозернисту структуру з червоно-чорними включеннями. Прекрасно піддається обробці. Твердий та міцний. Застосовується в будівництві як облицювальна плитка, елементи мощення типу тротуарної плитки, архітектурні елементи , такі як колони, балясини, кулі. 
+          <strong style="font-weight: bold; font-size: 2em;">Капустинский<br>(міжнародна назва -Rosso Santiago)</strong> видобувається в Україні. Кар'єр розташований в районі залізничної станції Капустине, Кіровоградської області. Один із найпопулярніших сортів червоного граніту. Має крупнозернисту структуру з червоно-чорними включеннями. Прекрасно піддається обробці. Твердий та міцний. Застосовується в будівництві як облицювальна плитка, елементи мощення типу тротуарної плитки, архітектурні елементи , такі як колони, балясини, кулі. 
         </p>
         <p class="product-text">
           <strong style="font-weight: bold; font-size: 1.5em;">Перевагою Капустинського граніту є:</strong><br>
@@ -512,7 +522,41 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
+});document.addEventListener("DOMContentLoaded", function () {
+  let startX = 0;
+  const swipeThreshold = 50; // Порог для определения свайпа
+
+  // Обработчик для начала свайпа
+  document.addEventListener("touchstart", (e) => {
+    startX = e.touches[0].clientX;
+  });
+
+  // Обработчик для завершения свайпа
+  document.addEventListener("touchend", (e) => {
+    const endX = e.changedTouches[0].clientX;
+    const diffX = startX - endX;
+
+    if (Math.abs(diffX) > swipeThreshold) {
+      if (diffX > 0) {
+        // Свайп влево: переход на следующую страницу
+        const nextPage = document.querySelector(".right-arrow");
+        if (nextPage) {
+          document.body.classList.add("fade-out");
+          setTimeout(() => {
+            window.location.href = nextPage.getAttribute("href");
+          }, 500);
+        }
+      } else {
+        // Свайп вправо: возвращение на предыдущую страницу
+        document.body.classList.add("fade-out");
+        setTimeout(() => {
+          history.back(); // Возвращает на предыдущую страницу в истории браузера
+        }, 500);
+      }
+    }
+  });
 });
+
     </script>
      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>

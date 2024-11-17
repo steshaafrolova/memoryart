@@ -322,7 +322,6 @@
 
 .fade-out {
     opacity: 1;
-    animation: fadeOutAnimation 0.5s forwards;
 }
 @keyframes fadeInAnimation {
     from { opacity: 0; }
@@ -402,6 +401,16 @@
 .arrow:hover {
     color: #8a8282;
 }
+body.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+body.fade-in {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
     </style>
   </head>
   <body class="fade-in">
@@ -472,7 +481,7 @@
           <a href="/elm/kApystsky.html" class="arrow right-arrow">&#8594;</a> <!-- Стрелка вправо -->
       </div>     
         <p class="product-text">
-          <strong style="font-weight: bold; font-size: 2em;">Новоданиловский(міжнародна назва - Withered)</strong>видобувається в Україні. Кар'єр розташований біля с. Новоданилівка, Казанківського району, Миколаївської області. Має зернисту текстуру із червоно-чорними включеннями. У полірованому вигляді переважає червоний колір, що робить його популярним, як оздоблювальний матеріал для внутрішньої та зовнішньої обробки. Застосовується в будівництві як облицювальна плитка, елементи мощення типу бруківки та тротуарної плитки, архітектурні елементи, такі як колони, балясини, кулі. 
+          <strong style="font-weight: bold; font-size: 2em;">Новоданиловский<br>(міжнародна назва-<br> - Withered)</strong><br>видобувається в Україні. Кар'єр розташований біля с. Новоданилівка, Казанківського району, Миколаївської області. Має зернисту текстуру із червоно-чорними включеннями. У полірованому вигляді переважає червоний колір, що робить його популярним, як оздоблювальний матеріал для внутрішньої та зовнішньої обробки. Застосовується в будівництві як облицювальна плитка, елементи мощення типу бруківки та тротуарної плитки, архітектурні елементи, такі як колони, балясини, кулі. 
         </p>
         <p class="product-text">
           <strong style="font-weight: bold; font-size: 1.5em;">Перевагою Новоданиловського граніту є:</strong><br>
@@ -512,6 +521,40 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
+});
+document.addEventListener("DOMContentLoaded", function () {
+  let startX = 0;
+  const swipeThreshold = 50; // Порог для определения свайпа
+
+  // Обработчик для начала свайпа
+  document.addEventListener("touchstart", (e) => {
+    startX = e.touches[0].clientX;
+  });
+
+  // Обработчик для завершения свайпа
+  document.addEventListener("touchend", (e) => {
+    const endX = e.changedTouches[0].clientX;
+    const diffX = startX - endX;
+
+    if (Math.abs(diffX) > swipeThreshold) {
+      if (diffX > 0) {
+        // Свайп влево: переход на следующую страницу
+        const nextPage = document.querySelector(".right-arrow");
+        if (nextPage) {
+          document.body.classList.add("fade-out");
+          setTimeout(() => {
+            window.location.href = nextPage.getAttribute("href");
+          }, 500);
+        }
+      } else {
+        // Свайп вправо: возвращение на предыдущую страницу
+        document.body.classList.add("fade-out");
+        setTimeout(() => {
+          history.back(); // Возвращает на предыдущую страницу в истории браузера
+        }, 500);
+      }
+    }
+  });
 });
     </script>
      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>

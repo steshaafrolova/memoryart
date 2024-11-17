@@ -25,7 +25,7 @@
       rel="stylesheet"
     />
     <style>
-     body {
+   body {
         font-family: "Roboto", sans-serif;
         background-color: black;
         color: white;
@@ -315,7 +315,64 @@
           font-size: 1.5em; 
         }
       }
-      .product-navigation {
+      .fade-in {
+    opacity: 0;
+    animation: fadeInAnimation 0.5s forwards;
+}
+
+.fade-out {
+    opacity: 1;
+}
+@keyframes fadeInAnimation {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeOutAnimation {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+    .navigation-button {
+      font-size: 30px;
+      color: rgb(241, 219, 26);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+    }
+    .navigation-button:hover svg {
+      fill: #555;
+    }
+    .navigation-button svg {
+      width: 40px;
+      height: 40px;
+      fill: rgb(241, 219, 26);
+      transition: transform 0.3s;
+    }
+    .navigation-button:hover svg {
+      transform: scale(1.2);
+    }
+    .navigation-button {
+  font-size: 30px;
+  color: rgb(241, 219, 26);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  margin-top: 20px; 
+}
+
+.navigation-button svg {
+  width: 45px;
+  height: 45px;
+  fill: rgb(241, 219, 26);
+  transition: transform 0.3s, fill 0.3s;
+  margin-right: 15px;
+}
+
+.navigation-button:hover svg {
+  transform: scale(1.2);
+  fill: white; 
+}
+.product-navigation {
     display: flex;
     align-items: center; 
     justify-content: center;
@@ -343,6 +400,15 @@
 
 .arrow:hover {
     color: #8a8282;
+}
+body.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+body.fade-in {
+  opacity: 1;
+  transition: opacity 0.5s ease;
 }
     </style>
   </head>
@@ -413,7 +479,7 @@
           <a href="/elm/novodanilovsky.html" class="arrow right-arrow">&#8594;</a> <!-- Стрелка вправо -->
       </div>     
         <p class="product-text">
-          <strong style="font-weight: bold; font-size: 2em;">Лабрадорит Volga Blue</strong> видобувається в Україні, в Полтавській області. Цей унікальний гранітний камінь має темний чорний фон, прикрашений яскравими синіми відтінками, що створює ефект глибоких вод або нічного неба. Саме завдяки неповторному кольоровому переливу Volga Blue високо цінують у дизайні інтер'єрів, архітектурних проектах та меморіальних комплексах. Камінь підходить для створення стільниць, підвіконь, сходів та облицювання стін, де потрібно додати нотку елегантності та розкоші.
+          <strong style="font-weight: bold; font-size: 2em;">Лабрадорит Volga Blue</strong> <br>видобувається в Україні, в Полтавській області. Цей унікальний гранітний камінь має темний чорний фон, прикрашений яскравими синіми відтінками, що створює ефект глибоких вод або нічного неба. Саме завдяки неповторному кольоровому переливу Volga Blue високо цінують у дизайні інтер'єрів, архітектурних проектах та меморіальних комплексах. Камінь підходить для створення стільниць, підвіконь, сходів та облицювання стін, де потрібно додати нотку елегантності та розкоші.
         </p>
         <p class="product-text">
           <strong style="font-weight: bold; font-size: 1.5em;">Перевагою лабрадориту Volga Blue:</strong><br>
@@ -428,7 +494,7 @@
       </div>
     </div>
     <script>
-       window.onload = function () {
+        window.onload = function () {
     document.body.classList.add('fade-in');
     const title = document.getElementById("title");
     title.classList.add("visible");
@@ -453,6 +519,40 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
+});
+document.addEventListener("DOMContentLoaded", function () {
+  let startX = 0;
+  const swipeThreshold = 50; // Порог для определения свайпа
+
+  // Обработчик для начала свайпа
+  document.addEventListener("touchstart", (e) => {
+    startX = e.touches[0].clientX;
+  });
+
+  // Обработчик для завершения свайпа
+  document.addEventListener("touchend", (e) => {
+    const endX = e.changedTouches[0].clientX;
+    const diffX = startX - endX;
+
+    if (Math.abs(diffX) > swipeThreshold) {
+      if (diffX > 0) {
+        // Свайп влево: переход на следующую страницу
+        const nextPage = document.querySelector(".right-arrow");
+        if (nextPage) {
+          document.body.classList.add("fade-out");
+          setTimeout(() => {
+            window.location.href = nextPage.getAttribute("href");
+          }, 500);
+        }
+      } else {
+        // Свайп вправо: возвращение на предыдущую страницу
+        document.body.classList.add("fade-out");
+        setTimeout(() => {
+          history.back(); // Возвращает на предыдущую страницу в истории браузера
+        }, 500);
+      }
+    }
+  });
 });
     </script>
      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>

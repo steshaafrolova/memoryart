@@ -404,6 +404,10 @@
 .arrow:hover {
     color: #8a8282;
 }
+body.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
     </style>
   </head>
   <body class="fade-in">
@@ -514,6 +518,104 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+document.addEventListener("DOMContentLoaded", function () {
+    let startX = 0;
+    let endX = 0;
+
+    // Обработчик для начала свайпа
+    document.addEventListener("touchstart", (e) => {
+      startX = e.touches[0].clientX;
+    });
+
+    // Обработчик для завершения свайпа
+    document.addEventListener("touchend", (e) => {
+      endX = e.changedTouches[0].clientX;
+      const diffX = startX - endX;
+
+      // Порог для определения свайпа
+      const swipeThreshold = 50;
+
+      if (Math.abs(diffX) > swipeThreshold) {
+        if (diffX > 0) {
+          // Свайп влево: следующая страница
+          const nextPage = document.querySelector(".right-arrow");
+          if (nextPage) {
+            window.location.href = nextPage.getAttribute("href");
+          }
+        } else {
+          // Свайп вправо: предыдущая страница
+          const prevPage = document.querySelector(".left-arrow");
+          if (prevPage) {
+            window.location.href = prevPage.getAttribute("href");
+          }
+        }
+      }
+    });
+  });
+  document.addEventListener("DOMContentLoaded", function () {
+    let startX = 0;
+    let endX = 0;
+
+    // Обработчик для начала свайпа
+    document.addEventListener("touchstart", (e) => {
+      startX = e.touches[0].clientX;
+    });
+
+    // Обработчик для завершения свайпа
+    document.addEventListener("touchend", (e) => {
+      endX = e.changedTouches[0].clientX;
+      const diffX = startX - endX;
+
+      // Порог для определения свайпа
+      const swipeThreshold = 50;
+
+      if (Math.abs(diffX) > swipeThreshold) {
+        if (diffX > 0) {
+          // Свайп влево: следующая страница
+          const nextPage = document.querySelector(".right-arrow");
+          if (nextPage) {
+            window.location.href = nextPage.getAttribute("href");
+          }
+        } else {
+          // Свайп вправо: предыдущая страница
+          const prevPage = document.querySelector(".left-arrow");
+          if (prevPage) {
+            window.location.href = prevPage.getAttribute("href");
+          }
+        }
+      }
+    });
+  });
+document.addEventListener("touchend", (e) => {
+  endX = e.changedTouches[0].clientX;
+  const diffX = startX - endX;
+
+  if (Math.abs(diffX) > swipeThreshold) {
+    document.body.classList.add("fade-out");
+    setTimeout(() => {
+      if (diffX > 0) {
+        const nextPage = document.querySelector(".right-arrow");
+        if (nextPage) {
+          window.location.href = nextPage.getAttribute("href");
+        }
+      } else {
+        const prevPage = document.querySelector(".left-arrow");
+        if (prevPage) {
+          window.location.href = prevPage.getAttribute("href");
+        }
+      }
+    }, 500);
+  }
+});
+if (diffX > 0) {
+  const nextPage = document.querySelector(".right-arrow");
+  if (nextPage) {
+    document.body.classList.add("fade-out");
+    setTimeout(() => {
+      window.location.href = nextPage.getAttribute("href");
+    }, 500);
+  }
+}
     </script>
      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
