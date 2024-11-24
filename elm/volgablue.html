@@ -12,6 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.16/dist/lenis.css">
     <link
       href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap"
       rel="stylesheet"
@@ -28,6 +29,7 @@
    body {
         font-family: "Roboto", sans-serif;
         background-color: black;
+        background-image: url(/imges/ббб.webp);
         color: white;
         margin: 0;
         padding: 0;
@@ -74,12 +76,21 @@
         height: 300px;
         overflow: hidden;
       }
+      .product-image {
+  border: 5px solid rgb(241, 219, 26); 
+  border-radius: 8px; 
+  padding: 5px;
+  transition: transform 0.3s ease; 
+}
+
+.product-image:hover {
+  transform: scale(1.05); 
+}
 
       .product-image {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        margin: 1em;
         border-radius: 5px;
         transition: transform 0.3s;
       }
@@ -185,6 +196,25 @@
         display: flex;
         gap: 10px;
       }
+      html.lenis, html.lenis body { 
+  height: auto; 
+} 
+ 
+.lenis.lenis-smooth { 
+  scroll-behavior: auto !important; 
+} 
+ 
+.lenis.lenis-smooth [data-lenis-prevent] { 
+  overscroll-behavior: contain; 
+} 
+ 
+.lenis.lenis-stopped { 
+  overflow: clip; 
+} 
+ 
+.lenis.lenis-smooth iframe { 
+  pointer-events: none; 
+}
       .button {
         cursor: pointer;
         text-decoration: none;
@@ -410,6 +440,25 @@ body.fade-in {
   opacity: 1;
   transition: opacity 0.5s ease;
 }
+html.lenis, html.lenis body { 
+  height: auto; 
+} 
+ 
+.lenis.lenis-smooth { 
+  scroll-behavior: auto !important; 
+} 
+ 
+.lenis.lenis-smooth [data-lenis-prevent] { 
+  overscroll-behavior: contain; 
+} 
+ 
+.lenis.lenis-stopped { 
+  overflow: clip; 
+} 
+ 
+.lenis.lenis-smooth iframe { 
+  pointer-events: none; 
+}
     </style>
   </head>
   <body class="fade-in">
@@ -554,7 +603,22 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+const lenis = new Lenis(); 
+ 
+// Listen for the scroll event and log the event data 
+lenis.on('scroll', (e) => { 
+  console.log(e); 
+}); 
+ 
+// Use requestAnimationFrame to continuously update the scroll 
+function raf(time) { 
+  lenis.raf(time); 
+  requestAnimationFrame(raf); 
+} 
+ 
+requestAnimationFrame(raf);
     </script>
+    <script src="https://unpkg.com/lenis@1.1.16/dist/lenis.min.js"></script>
      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
   </body>

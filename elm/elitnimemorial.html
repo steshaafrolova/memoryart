@@ -1,0 +1,1247 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MemoryArt</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.16/dist/lenis.css">
+<script src="https://unpkg.com/lenis@1.1.16/dist/lenis.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMzV06dD1d3a02LCx6VfS/A5G+e3er3tXjIoW"
+      crossorigin="anonymous"
+    />
+    <link href=https://fonts.google.com/specimen/Cormorant+Garamond
+    rel="stylesheet" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+     html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Nunito Sans", sans-serif;
+        background-image: url(/imges/ббб.webp);
+        color: white;
+        margin: 0;
+        padding: 0;
+      }
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+.fade-in.visible {
+  opacity: 1;
+}
+.top-header {
+    font-family: "Great Vibes", cursive;
+    color: rgb(241, 219, 26);
+    text-align: center;
+    background-image: url(/imges/ll.avif);
+    font-size: 2.5em;
+    margin: 0;
+    padding: 10px 0;
+    line-height: 1.2; 
+    background-size: cover; 
+    background-position: center;
+    overflow: hidden;
+}
+      .my-header1 {
+        font-family: "Great Vibes", cursive;
+        color: rgb(241, 219, 26);
+        text-align: center;
+        font-size: 6em;
+        background-image: url(/imges/ббб.webp);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 20px 0;
+        margin: 0;
+        width: 100vw;
+        position: relative;
+      }
+      .my-header22 {
+        font-family: "Great Vibes", cursive;
+        color: rgb(241, 219, 26);
+        text-align: center;
+        font-size: 4em;
+        padding: 20px 0;
+        margin: 0;
+        width: 100vw;
+        position: relative;
+      }
+      .new-section {
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: rgb(241, 219, 26);
+        text-align: center;
+        margin-top: 20px;
+      }
+      .new-section h2 {
+        font-family: "Anton" cursive;
+        font-size: 2.5em;
+        color: rgb(241, 219, 26);
+        margin: 0;
+      }
+      .social-icons {
+        position: absolute;
+        right: 20px;
+        transform: translateX(-50%);
+        top: 20px;
+        display: flex;
+        gap: 10px;
+      }
+      .button {
+        cursor: pointer;
+        text-decoration: none;
+        color: #ffff;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #2d2e32;
+        border: 2px solid #2d2e32;
+        transition: all 0.45s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .button:hover {
+        transform: rotate(360deg);
+        transform-origin: center center;
+        background-color: #ffff;
+        color: #2d2e32;
+      }
+      .button:hover .btn-svg {
+        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(305deg)
+          brightness(103%) contrast(103%);
+      }
+      .dropdown-menu {
+        background-color: rgba(0, 0, 0, 0.9);
+        border: none;
+        border-radius: 0;
+      }
+      .dropdown-item {
+        color: rgb(241, 219, 26);
+        padding: 10px 20px;
+      }
+      .dropdown-item:hover {
+        background-color: rgb(241, 219, 26);
+        color: black;
+      }
+      .navbar {
+        background-color: #443436;
+        padding: 15px 0;
+        
+      }
+      html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: clip;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+      .navbar-nav {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+      }
+      .navbar-nav .nav-link {
+        color: rgb(241, 219, 26) !important;
+        font-weight: bold;
+        font-family:"DM Serif Text", serif;
+        text-transform: uppercase;
+        padding: 10px 20px;
+        text-align: center;
+        font-size: 1.2em;
+      }
+      .navbar-nav .nav-link:hover {
+        color: rgb(0, 0, 0) !important;
+        background-color: rgb(241, 219, 26) !important;
+        border-radius: 5px;
+      }
+      .video-container {
+        position: relative;
+        width: 100%;
+        height: 60vh;
+        overflow: hidden;
+        margin-bottom: 20px;
+      }
+      .video-container video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .text-content {
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        transform: translateY(-50%);
+        text-align: left;
+        color: white;
+        width: 60%;
+      }
+      .text-content h2 {
+        font-family: "Archivo Black", sans-serif;
+        font-size: 2.5em;
+        color: rgb(241, 219, 26);
+        margin: 0;
+      }
+      .text-content p {
+        font-family: "Nunito Sans", sans-serif;
+        font-size: 1.1em;
+        line-height: 1.6em;
+        color: white;
+        margin: 10px 0 0;
+      }
+      button {
+        outline: none;
+        cursor: pointer;
+        border: none;
+        padding: 0.9rem 2rem;
+        margin: 10px 0 0;
+        font-family: inherit;
+        font-size: inherit;
+        position: relative;
+        display: flex;
+        letter-spacing: 0.05rem;
+        font-weight: 700;
+        font-size: 17px;
+        border-radius: 500px;
+        overflow: hidden;
+        background: rgb(241, 219, 26);
+        color: black;
+        align-items: center;
+        gap: 10px;
+      }
+      button:hover {
+        background: black;
+        color: white;
+      }
+
+      @media (max-width: 768px) {
+        .my-header1 {
+          font-size: 4em;
+        }
+        .text-content h2 {
+          font-size: 2em;
+        }
+        .text-content p {
+          font-size: 1em;
+        }
+      }
+      @media (max-width: 576px) {
+        .my-header1 {
+          font-size: 3em;
+        }
+        .text-content {
+          left: 5%;
+          width: 90%;
+        }
+        .text-content h2 {
+          font-size: 1.5em;
+        }
+        .text-content p {
+          font-size: 0.9em;
+        }
+      }
+
+      @keyframes slide-in-top {
+        0% {
+          transform: translateY(-50px);
+          opacity: 0;
+        }
+
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+      .button-container {
+        display: flex;
+        align-items: center;
+      }
+
+      .additional-buttons {
+        display: flex;
+        gap: 10px;
+        margin-left: 20px;
+      }
+      .btn {
+        width: 7.5em;
+        height: 2.7em;
+        margin: 0.5em;
+        background: rgb(241, 219, 26);
+        color: black;
+        border: none;
+        border-radius: 0.625em;
+        font-size: 20px;
+        font-weight: bold;
+        cursor: pointer;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      }
+      .btn:hover {
+        color: rgb(241, 219, 26);
+      }
+      .btn:hover:after {
+        background: black;
+        transform: skewX(-45deg) scale(1, 1);
+        transition: all 0.5s;
+      }
+      button:after {
+        content: "";
+        background: rgb(0, 0, 0);
+        position: absolute;
+        z-index: -1;
+        left: -20%;
+        right: -20%;
+        top: 0;
+        bottom: 0;
+        transform: skewX(-45deg) scale(0, 1);
+        transition: all 0.5s;
+      }
+
+      button:hover:after {
+        transform: skewX(-45deg) scale(1, 1);
+        -webkit-transition: all 0.5s;
+        transition: all 0.5s;
+      }
+      .menu-section {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+  padding-left: 24px;
+}
+      .menu-item {
+        width: 230px;
+        height: 230px;
+        margin: 10px;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .menu-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+
+      .menu-item:hover img {
+        transform: scale(1.1);
+      }
+      .menu-text {
+        position: absolute;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.7);
+        color: white;
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        transition: transform 0.5s ease;
+        transform: translateY(100%);
+      }
+
+      .menu-item:hover .menu-text {
+        transform: translateY(0);
+      }
+      .navbar {
+  position: sticky;
+  top: 0;
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+
+/* Скрытие навбара при прокрутке вниз */
+.navbar.slide-up {
+  transform: translateY(-100%);
+}
+
+      .menu-container {
+        padding-left: 24px;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .menu-item:hover .menu-text {
+        transform: translateY(0);
+      }
+
+      .menu-item:hover .menu-text {
+        transform: translateY(0);
+      }
+      .menu-item:hover .menu-text {
+        transform: translateY(0);
+      }
+
+      .menu-text a {
+        text-decoration: none;
+      }
+
+      .menu-text strong {
+        transition: color 0.3s ease, font-weight 0.3s ease;
+      }
+
+      .menu-item:hover .menu-text strong {
+        color: yellow;
+        font-weight: bold;
+      }
+
+
+@media (max-width: 768px) {
+  .menu-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px; 
+  }
+
+  .menu-item img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .menu-text {
+    text-align: center;
+    margin-top: 5px;
+  }
+}
+.hidden {
+      transform: translateY(-100%);
+    }
+    .navbar, .my-header1 {
+      transition: transform 0.4s ease, opacity 0.4s ease;
+    }
+
+    .navbar.hidden, .my-header1.hidden {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    .fade-in-section {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      }
+      
+      .fade-in-section.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .navbar-nav .nav-link.active {
+  color: black !important;
+  background-color: rgb(241, 219, 26) !important;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.content {
+    text-align: left; 
+    margin: 0 auto; 
+    max-width: 800px; 
+    padding-left: 30px;
+}
+
+p {
+    font-size: 17px; 
+    line-height: 1.6; 
+    margin: 15px 0; 
+}
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px); 
+    transition: opacity 0.6s ease, transform 0.6s ease; 
+}
+
+.fade-in.visible {
+    opacity: 1; 
+    transform: translateY(0); 
+}
+.content {
+    max-width: 800px; 
+    margin: 0 auto; 
+    padding: 20px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+    border-radius: 8px; 
+}
+h3 {
+    font-size: 20px; 
+    color: rgb(241, 219, 26); 
+    margin-top: 15px; 
+}
+.gray-background {
+  background-color: #443436;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-navigation {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 70px;
+  margin-bottom: 40px;
+}
+@media (max-width: 1024px) { 
+    .header-navigation {
+        flex-direction: column;
+  }
+}
+
+@media (max-width: 1024px) { 
+    .header-navigation {
+    align-items: center;
+  }
+}
+
+.mini-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.mini-header h2 {
+  font-size: 35px;
+  color: rgb(241, 219, 26);
+  font-weight: bold;
+  margin: 0;
+  font-family: "Great Vibes", cursive;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+.mini-header p {
+  font-size: 28px;
+  margin: 0;
+  color: rgb(241, 219, 26);
+  font-family: "Great Vibes", cursive;
+}
+
+.navigation-container {
+  text-align: center;
+}
+
+.navigation-title {
+  font-size: 35px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: rgb(241, 219, 26);
+  font-family: "Great Vibes", cursive;
+}
+
+.navigation ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation ul li {
+  margin-bottom: 15px;
+}
+
+.navigation ul li a {
+  text-decoration: none;
+  color: rgb(241, 219, 26);
+  font-size: 16px;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.navigation ul li a:hover {
+  text-decoration: underline;
+}
+
+.slogan {
+  text-align: center;
+  font-size: 1.5em;
+  color: rgb(241, 219, 26);
+  padding-bottom: 10px;
+  font-family: "Great Vibes", cursive;
+}
+
+.navigation-and-catalog {
+    display: grid;
+    place-content: center;
+    gap: 40px;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 1024px) { 
+  .navigation-and-catalog {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) { 
+  .navigation-and-catalog {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.navigation-section,
+.catalog-section {
+  flex: 1;
+  text-align: center;
+  margin: 0 10px;
+}
+
+.contact-panel {
+  display: flex;
+  color: rgb(241, 219, 26);
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.contact-panel a {
+  text-decoration: none;
+  color: rgb(241, 219, 26);
+  display: flex;
+  align-items: center;
+}
+
+.contact-panel i {
+  font-size: 1.2em;
+  margin-right: 5px;
+}
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  box-sizing: border-box;
+}
+
+.footer-line {
+  width: 100%;
+  height: 1px;
+  background-color: #000000;
+  margin: 0;
+}
+
+.footer-text {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.footer-text a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-text a:hover {
+  text-decoration: underline;
+}
+.centered-text {
+  text-align: center;
+  font-size: 1.2em; 
+  color: rgb(241, 219, 26); 
+  margin-top: 20px; 
+}
+
+.highlight {
+  color: rgb(241, 219, 26); 
+  font-weight: bold;
+  text-decoration: none; 
+  font-size: 1.5em; 
+}
+.bold-text {
+        font-weight: bold;
+    }
+    .large-bold-text {
+        font-size: 1.1em; 
+        font-weight: bold;
+    }
+    .first-letter {
+        font-family: "Great Vibes", cursive; 
+        font-size: 2em;
+    }
+    .custom-link {
+    color: inherit; 
+    text-decoration: none;
+    cursor: pointer; 
+}
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: -60px;
+  background-color: rgb(241, 219, 26);
+  color: black;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: right 0.4s ease, opacity 0.4s ease;
+  opacity: 0;
+  z-index: 1000;
+}
+
+.scroll-to-top.visible {
+  right: 20px;
+  opacity: 1;
+}
+
+
+.scroll-to-top i {
+  font-size: 20px;
+}
+
+.scroll-to-top:hover {
+  background-color: #443436;
+  color: rgb(241, 219, 26);
+}
+
+.gallery-wrapper {
+  overflow: hidden;
+}
+.catalog-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Четыре элемента в ряд */
+  gap: 25px; /* Расстояние между карточками */
+  padding: 25px; /* Отступы от границ контейнера */
+}
+
+.catalog-item {
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #bcb5b5;
+  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+  max-width: 250px;
+  margin: 0 auto;
+}
+
+
+.catalog-item img {
+  width: 100%;
+  height: 280px; 
+  object-fit: cover; 
+  border-bottom: 1px solid #ccc; /* Разделение изображения и текста */
+  transition: transform 0.4s ease-in-out; 
+}
+
+.catalog-item h3 {
+  font-size: 16px;
+  margin: 12px 0;
+  color: #333;
+}
+
+.catalog-item a {
+  display: inline-block;
+  margin: 12px 0;
+  padding: 8px 14px;
+  font-size: 13px;
+  background-color: #443436;
+  color: #ccc;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.catalog-item a:hover {
+  background-color: #5e544c;
+}
+
+.catalog-item:hover {
+  transform: translateY(-8px); 
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.catalog-item:hover img {
+  transform: scale(1.07);
+}
+
+
+@media (max-width: 1024px) {
+  .catalog-container {
+    grid-template-columns: repeat(3, 1fr); 
+  }
+}
+
+@media (max-width: 768px) {
+  .catalog-container {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media (max-width: 480px) {
+  .catalog-container {
+    grid-template-columns: 1fr; 
+  }
+}
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+.my-header-chomy {
+  font-family: "Great Vibes", cursive;
+  color: rgb(241, 219, 26);
+  text-align: center;
+  font-size: 3.4em;
+  background-size: cover;
+  background-position: center;
+  padding: 20px 0;
+  margin: 0;
+  width: 100%;
+}
+.styled-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  text-align: center; /* Центрування всього списку */
+}
+
+.styled-list li {
+  display: flex;
+  align-items: center; /* Вертикальне вирівнювання */
+  justify-content: center; /* Центрування по горизонталі */
+  margin-bottom: 20px;
+}
+
+.styled-list i {
+  font-size: 1.4em;
+  color: rgb(241, 219, 26);
+  margin-right: 15px;
+}
+@media (max-width: 768px) {
+  .styled-list {
+    padding-left: 20px; 
+    text-align: left; 
+  }
+
+  .styled-list i {
+    font-size: 1.1em; 
+  }
+
+  .styled-list li {
+    margin-bottom: 15px; 
+  }
+}
+
+/* 480 */
+@media (max-width: 480px) {
+  .styled-list {
+    padding-left: 30px; 
+  }
+
+  .styled-list i {
+    font-size: 1.3em; 
+  }
+
+  .styled-list li {
+    margin-bottom: 10px; 
+  }
+}
+.centered-text {
+  text-align: left; 
+  font-size: 1.4em;
+  color: rgb(241, 219, 26);
+  margin: 0; 
+}
+
+.clickable-link {
+  color: rgb(241, 219, 26);
+  text-decoration: none;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.clickable-link:hover {
+  color: #666;
+}
+
+.clickable-link:active,
+.clickable-link:focus {
+  color: #666;
+  text-decoration: none;
+}
+ul li a {
+  color: #f1db1a; /* Yellow color */
+  text-decoration: none;
+  position: relative;
+}
+
+ul li a:hover {
+  text-decoration: none;
+}
+
+ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #f1db1a;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+ul li a:hover::after {
+  transform: scaleX(1);
+}
+    </style>
+  </head>
+  <body class="fade-in">
+    <h2 class="top-header header-shown">З турботою про головне</h2>
+    <h1 class="my-header1 header-shown">
+      <a
+        href="/elm/index.html"
+        style="color: rgb(241, 219, 26); text-decoration: none"
+        >MemoryArt</a
+      >
+    </h1>
+    <!--navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav w-100">
+            <li class="nav-item">
+              <a class="flex-sm-fill text-sm-center nav-link" href="pamytnyky.html">Пам'ятники</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Vydygranity.html">Види граніту</a>
+            </li>
+            <li class="nav-item">
+              <a class="flex-sm-fill text-sm-center nav-link" href="nashiroboty.html">Наші роботи</a>
+            </li>
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-no-fade>
+    Про нас
+  </a>
+  <ul class="dropdown-menu" data-no-fade>
+    <li>
+      <a class="dropdown-item" href="memoryart.html" data-no-fade>MemoryArt</a>
+    </li>
+    <li>
+      <a class="dropdown-item" href="dostavkaioplata.html" data-no-fade>Доставка та оплата</a>
+    </li>
+    <li>
+      <a class="dropdown-item" href="putanny.html" data-no-fade>Питання та відповіді</a>
+    </li>
+  </ul>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="contacts.html">Контакти</a>
+</li>
+        </div>
+      </div>
+    </nav>
+    <!--header-->
+    <div class="content-section">
+      <h2 class="my-header22 fade-in">Елітні меморіальні коплекси</h2>
+      <h3 class="my-header-chomy fade-in">Як зробити замовлення?</h3>
+      <ul class="styled-list centered-text fade-in">
+        <li>
+          <i class="fa-solid fa-scroll"></i>
+          <p>Визначіть для себе смисловий зміст майбутнього пам'ятника, які вірші відобразити, що втілити в камені.</p>
+        </li>
+        <li>
+          <i class="fa-solid fa-image"></i>
+          <p>Підготуйте фото, яке Ви б хотіли зобразити на пам'ятнику. Підготуйте точні дані про померлого — дати, ПІБ.</p>
+        </li>
+        <li>
+          <i class="fa-solid fa-pen-ruler"></i>
+          <p>Визначтесь із габаритними розмірами майбутнього надгробного пам'ятника, кольором і бажаним матеріалом.</p>
+        </li>
+        <li>
+          <i class="fas fa-phone"></i>
+          <p>
+            <a href="/elm/contacts.html" class="clickable-link">Зателефонуйте нам</a> або <i class="fa-solid fa-building"></i>
+            <a href="/elm/contacts.html" class="clickable-link"  target="_blank">завітайте в наш офіс</a>.
+          </p>
+        </li>
+      </ul>
+<!-- pamytnyky -->
+
+<!-- scrolltotop -->
+  <div id="scrollToTopBtn" class="scroll-to-top">
+    <i class="fas fa-arrow-up"></i> 
+  </div>
+  <!-- footer -->
+  <div class="grid">
+    <div class="gray-background">
+        <div>
+          <div class="header-navigation">
+              <!-- Мини-заголовок и слоган -->
+              <div class="mini-header">
+                <a href="/elm/index.html" style="text-decoration: none;">
+                  <h2>MemoryArt</h2>
+                </a>   
+              <div class="slogan">З турботою про головне</div>
+              </div>
+              <!-- Навигация -->
+              <div class="navigation-and-catalog">
+              <div class="catalog-section">
+                  <h3 class="navigation-title">Навігація</h3>
+                  <nav class="navigation">
+                      <ul>
+                        <li><a href="/elm/memoryart.html">MemoryArt</a></li>
+                          <li><a href="/elm/pamytnyky.html">Пам'ятники</a></li>
+                          <li><a href="/elm/Vydygranity.html">Види граніту</a></li>
+                          <li><a href="/elm/acsesiris.html">Аксесуари та декор</a></li>
+                          <li><a href="/elm/nashiroboty.html">Наші роботи</a></li>
+                          <li><a href="/elm/dostavkaioplata.html">Доставка і оплата</a></li>
+                          <li><a href="/elm/putanny.html">Питання та відповіді</a></li>
+                          <li><a href="/elm/contacts.html">Контакти</a></li>
+                      </ul>
+                  </nav>
+              </div>
+              <div class="catalog-section">
+                  <h3 class="navigation-title">Каталог</h3>
+                  <nav class="navigation">
+                    <ul>
+                        <li><a href="/elm/pamytnyky.html">Гранітні памятники:</a></li>
+                        <li><a href="/elm/odnogo.html">Одинарні</a></li>
+                        <li><a href="/elm/dvog.html">Подвійні</a></li>
+                        <li><a href="/elm/rodynni.html">Родинні</a></li>
+                        <li><a href="/elm/viyska.html">Військовим</a></li>
+                        <li><a href="/elm/sklo.html">Фотоскло</a></li>
+                        <li><a href="/elm/elitnimemorial.html">Елітні меморіальні коплекси</a></li>
+                        <li><a href="/elm/specpropoz.html">Спеціальна пропозиція</a></li>
+                        <li><a href="/elm/acsesiris.html">Аксесуари та декор</a></li>
+                  </ul>
+              </nav>
+          </div>
+          <div class="contact-panel">
+              <h3 class="navigation-title">Контакти</h3>
+              <nav class="contact-panel">
+                <a href="https://maps.app.goo.gl/mQwk5qb4wDtrGSRQ9  " target="_blank"  class="map-link">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span>  проспект Трубників, 7 а. м. Нікополь <br> Дніпропетровська область, 53200</span>
+              </a>
+              <a href="tel:+380753763635">
+                <i class="fas fa-phone-alt"></i>
+                <span>+380 75 376 36 35</span>
+            </a>
+            <a href="tel:+380963763635">
+                <i class="fas fa-phone-alt"></i>
+                <span>+380 96 376 36 35</span>
+            </a>
+            <a href="tel:+380733763635">
+                <i class="fas fa-phone-alt"></i>
+                <span>+380 73 376 36 35</span>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=memoryartua@gmail.com" target="_blank">
+                  <i class="fas fa-envelope"></i>
+                  <span>memoryartua@gmail.com</span>
+              </a>
+              </nav>
+          </div>
+      </div>
+    </div>
+  <div class="footer">
+      <hr class="footer-line">
+      <div class="footer-text">
+        <a href="/elm/polityka.html">Політика конфіденційності</a>
+        <span>© 2024 MemoryArt. Усі права захищено.</span>
+      </div>
+    </div>
+    </div>
+</body>
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const body = document.querySelector("body");
+    body.classList.add("fade-in");
+    setTimeout(() => {
+        body.classList.add("visible");
+    }, 50);
+
+   
+    const fadeElements = document.querySelectorAll('.fade-in, .advantage-item, .advantage-step');
+    const appearOptions = { threshold: 0.1 };
+    const appearOnScroll = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible', 'show');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, appearOptions);
+
+    fadeElements.forEach(element => {
+        appearOnScroll.observe(element);
+    });
+    let lastScrollY = window.scrollY;
+    const navbar = document.querySelector(".navbar");
+    const header = document.querySelector(".my-header1");
+
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > lastScrollY) {
+            navbar?.classList.add("hidden");
+            header?.classList.add("hidden");
+        } else {
+            navbar?.classList.remove("hidden");
+            header?.classList.remove("hidden");
+        }
+        lastScrollY = window.scrollY;
+    });
+    const scrollToTopBtn = document.querySelector('.scroll-to-top');
+    let lastScrollTop = 0;
+
+    window.addEventListener('scroll', function () {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollTop > 300) {
+            if (scrollTop < lastScrollTop) {
+                scrollToTopBtn?.classList.add('visible');
+            } else {
+                scrollToTopBtn?.classList.remove('visible');
+            }
+        } else {
+            scrollToTopBtn?.classList.remove('visible');
+        }
+        lastScrollTop = Math.max(scrollTop, 0);
+    });
+
+    if (scrollToTopBtn) {
+        scrollToTopBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    } else {
+        console.warn("Кнопка 'Прокрутить вверх'");
+    }
+});
+document.addEventListener("DOMContentLoaded", function () {
+
+    const scrollToTopBtn = document.querySelector('.scroll-to-top');
+
+    window.addEventListener('scroll', function () {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+        if (scrollTop > 50) { 
+            scrollToTopBtn?.classList.add('visible');
+        } else {
+            scrollToTopBtn?.classList.remove('visible');
+        }
+    });
+
+    if (scrollToTopBtn) {
+        scrollToTopBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    } else {
+        console.warn("Кнопка 'Прокрутить вверх' не найдена на странице.");
+    }
+});
+document.addEventListener("DOMContentLoaded", function () {
+    const fadeElements = document.querySelectorAll(".fade-in");
+
+    const appearOptions = {
+        threshold: 0.1,
+    };
+
+    const appearOnScroll = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target); 
+            }
+        });
+    }, appearOptions);
+
+    fadeElements.forEach(element => {
+        appearOnScroll.observe(element);
+    });
+});
+const lenis = new Lenis();
+
+// Listen for the scroll event and log the event data
+lenis.on('scroll', (e) => {
+  console.log(e);
+});
+
+// Use requestAnimationFrame to continuously update the scroll
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
+  </script>
+</html>

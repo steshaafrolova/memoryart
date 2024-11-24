@@ -32,6 +32,8 @@
       integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMzV06dD1d3a02LCx6VfS/A5G+e3er3tXjIoW"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.16/dist/lenis.css">
+    <script src="https://unpkg.com/lenis@1.1.16/dist/lenis.min.js"></script> 
     
     <link href=https://fonts.google.com/specimen/Cormorant+Garamond
     rel="stylesheet" />
@@ -79,7 +81,31 @@
     overflow: hidden;
 }
 
+ul li a {
+  color: #f1db1a; /* Yellow color */
+  text-decoration: none;
+  position: relative;
+}
 
+ul li a:hover {
+  text-decoration: none;
+}
+
+ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #f1db1a;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+ul li a:hover::after {
+  transform: scaleX(1);
+}
       .my-header1 {
         font-family: "Great Vibes", cursive;
         color: rgb(241, 219, 26);
@@ -801,7 +827,25 @@
 .navbar.slide-up {
   transform: translateY(-100%);
 }
+html.lenis, html.lenis body {
+  height: auto;
+}
 
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: clip;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
     </style>
   </head>
   <body class="fade-in">
@@ -919,49 +963,49 @@
         <div class="menu-item">
           <a href="/elm/odnogo.html">
             <img src="/imges/10-587-1.webp" alt="Image 1" />
-            <span class="menu-text">Для одного</span>
+            <span class="menu-text">Одинарні</span>
           </a>
         </div>
         <div class="menu-item">
           <a href="/elm/dvog.html">
             <img src="/imges/10-587-1.webp" alt="Image 2" />
-            <span class="menu-text">Для двох</span>
+            <span class="menu-text">Подвійні</span>
           </a>
         </div>
         <div class="menu-item">
-          <a href="#">
+          <a href="/elm/rodynni.html">
             <img src="/imges/10-587-1.webp" alt="Image 3" />
-            <span class="menu-text">Для військових</span>
+            <span class="menu-text">Родинні</span>
           </a>
         </div>
         <div class="menu-item">
-          <a href="#">
+          <a href="/elm/viyska.html">
             <img src="/imges/10-587-1.webp" alt="Image 4" />
-            <span class="menu-text">Елітні меморіальні комплекси</span>
+            <span class="menu-text">Військовим</span>
           </a>
         </div>
         <div class="menu-item">
-          <a href="#">
+          <a href="/elm/sklo.html">
             <img src="/imges/10-587-1.webp" alt="Image 5" />
             <span class="menu-text">Фотоскло</span>
           </a>
         </div>
         <div class="menu-item">
-          <a href="#">
+          <a href="/elm/elitnimemorial.html">
             <img src="/imges/10-587-1.webp" alt="Image 6" />
+            <span class="menu-text">Елітні меморіальні комплекси</span>
+          </a>
+        </div>
+        <div class="menu-item">
+          <a href="/elm/specpropoz.html">
+            <img src="/imges/10-587-1.webp" alt="Image 7" />
             <span class="menu-text">Спеціальна пропозиція</span>
           </a>
         </div>
         <div class="menu-item">
-          <a href="#">
-            <img src="/imges/10-587-1.webp" alt="Image 7" />
-            <span class="menu-text">Родинні</span>
-          </a>
-        </div>
-        <div class="menu-item">
-          <a href="#">
+          <a href="/elm/acsesiris.html">
             <img src="/imges/10-587-1.webp" alt="Image 8" />
-            <span class="menu-text">Аксесуари і декор</span>
+            <span class="menu-text">Аксесуари та декор</span>
           </a>
         </div>
       </div>
@@ -998,38 +1042,45 @@
                 <div class="catalog-section">
                     <h3 class="navigation-title">Каталог</h3>
                     <nav class="navigation">
-                        <ul>
-                          <li><a href="#">Гранітні памятники:</a></li>
-                          <li><a href="/elm/odnogo.html">Для одного</a></li>
-                          <li><a href="/elm/dvog.html">Для двох</a></li>
-                          <li><a href="#">Елітні меморіальні комплекси</a></li>
-                          <li><a href="#">Для військових</a></li>
-                          <li><a href="#">Фотоскло</a></li>
-                          <li><a href="#">Аксесуари і декор</a></li>
-                          <li><a href="#">Спеціальна пропозиція</a></li>
-                          <li><a href="#">Родинні</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="contact-panel">
-                    <h3 class="navigation-title">Контакти</h3>
-                    <nav class="contact-panel">
-                      <a href="https://maps.app.goo.gl/mQwk5qb4wDtrGSRQ9  " target="_blank"  class="map-link">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>  проспект Трубників, 7 а. м. Нікополь <br> Дніпропетровська область, 53200</span>
-                    </a>
-                        <a href="tel:+380123456789">
-                            <i class="fas fa-phone-alt"></i>
-                            <span>+380 66 260 18 59</span>
-                        </a>
-                        <a href="frolovastesha7@gmail.com">
-                            <i class="fas fa-envelope"></i>
-                            <span>frolovastesha7@gmail.com</span>
-                        </a>
-                    </nav>
-                </div>
+                      <ul>
+                        <li><a href="/elm/pamytnyky.html">Гранітні памятники:</a></li>
+                        <li><a href="/elm/odnogo.html">Одинарні</a></li>
+                        <li><a href="/elm/dvog.html">Подвійні</a></li>
+                        <li><a href="/elm/rodynni.html">Родинні</a></li>
+                        <li><a href="/elm/viyska.html">Військовим</a></li>
+                        <li><a href="/elm/sklo.html">Фотоскло</a></li>
+                        <li><a href="/elm/elitnimemorial.html">Елітні меморіальні коплекси</a></li>
+                        <li><a href="/elm/specpropoz.html">Спеціальна пропозиція</a></li>
+                        <li><a href="/elm/acsesiris.html">Аксесуари та декор</a></li>
+                    </ul>
+                </nav>
             </div>
-          </div>
+            <div class="contact-panel">
+                <h3 class="navigation-title">Контакти</h3>
+                <nav class="contact-panel">
+                  <a href="https://maps.app.goo.gl/mQwk5qb4wDtrGSRQ9  " target="_blank"  class="map-link">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>  проспект Трубників, 7 а. м. Нікополь <br> Дніпропетровська область, 53200</span>
+                </a>
+                <a href="tel:+380753763635">
+                  <i class="fas fa-phone-alt"></i>
+                  <span>+380 75 376 36 35</span>
+              </a>
+              <a href="tel:+380963763635">
+                  <i class="fas fa-phone-alt"></i>
+                  <span>+380 96 376 36 35</span>
+              </a>
+              <a href="tel:+380733763635">
+                  <i class="fas fa-phone-alt"></i>
+                  <span>+380 73 376 36 35</span>
+                  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=memoryartua@gmail.com" target="_blank">
+                    <i class="fas fa-envelope"></i>
+                    <span>memoryartua@gmail.com</span>
+                </a>
+                </nav>
+            </div>
+        </div>
+      </div>
     <div class="footer">
         <hr class="footer-line">
         <div class="footer-text">
@@ -1184,5 +1235,20 @@ document.addEventListener("DOMContentLoaded", function () {
     lastScrollY = window.scrollY;
   });
 });
+// Initialize Lenis
+const lenis = new Lenis();
+
+// Listen for the scroll event and log the event data
+lenis.on('scroll', (e) => {
+  console.log(e);
+});
+
+// Use requestAnimationFrame to continuously update the scroll
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
   </script>
 </html>

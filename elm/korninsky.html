@@ -241,25 +241,35 @@
         font-size: 1.2em;
       }
       .navbar-nav .nav-link:hover {
-        color: white !important;
+        color: rgb(0, 0, 0) !important;
         background-color: rgb(241, 219, 26) !important;
         border-radius: 5px;
       }
-      .video-container {
-        position: relative;
-        width: 100%;
-        height: 60vh;
-        overflow: hidden;
-        margin-bottom: 20px;
-      }
-      .video-container video {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
+      ul li a {
+  color: #f1db1a; /* Yellow color */
+  text-decoration: none;
+  position: relative;
+}
+
+ul li a:hover {
+  text-decoration: none;
+}
+
+ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #f1db1a;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+ul li a:hover::after {
+  transform: scaleX(1);
+}
       .text-content {
         position: absolute;
         top: 50%;

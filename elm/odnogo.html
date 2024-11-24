@@ -31,6 +31,8 @@
       integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMzV06dD1d3a02LCx6VfS/A5G+e3er3tXjIoW"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.16/dist/lenis.css">
+<script src="https://unpkg.com/lenis@1.1.16/dist/lenis.min.js"></script>
     <link href=https://fonts.google.com/specimen/Cormorant+Garamond
     rel="stylesheet" />
     <script
@@ -749,16 +751,18 @@ h3 {
   border-radius: 12px;
   overflow: hidden;
   background-color: #bcb5b5;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  max-width: 250px; /* Широкие карточки для визуального баланса */
-  margin: 0 auto; /* Выравнивание по центру */
+  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+  max-width: 250px;
+  margin: 0 auto;
 }
+
 
 .catalog-item img {
   width: 100%;
-  height: 280px; /* Высота изображений для сбалансированного вида */
-  object-fit: cover; /* Центрирование изображений */
+  height: 280px; 
+  object-fit: cover; 
   border-bottom: 1px solid #ccc; /* Разделение изображения и текста */
+  transition: transform 0.4s ease-in-out; 
 }
 
 .catalog-item h3 {
@@ -784,31 +788,81 @@ h3 {
 }
 
 .catalog-item:hover {
-  transform: translateY(-5px); /* Эффект подъёма карточки при наведении */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  transform: translateY(-8px); 
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
+
+.catalog-item:hover img {
+  transform: scale(1.07);
+}
+
 
 @media (max-width: 1024px) {
   .catalog-container {
-    grid-template-columns: repeat(3, 1fr); /* Три элемента в ряд */
+    grid-template-columns: repeat(3, 1fr); 
   }
 }
 
 @media (max-width: 768px) {
   .catalog-container {
-    grid-template-columns: repeat(2, 1fr); /* Два элемента в ряд */
+    grid-template-columns: repeat(2, 1fr); 
   }
 }
 
 @media (max-width: 480px) {
   .catalog-container {
-    grid-template-columns: 1fr; /* Один элемент в ряд */
+    grid-template-columns: 1fr; 
   }
 }
+ul li a {
+  color: #f1db1a; /* Yellow color */
+  text-decoration: none;
+  position: relative;
+}
+
+ul li a:hover {
+  text-decoration: none;
+}
+
+ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #f1db1a;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+ul li a:hover::after {
+  transform: scaleX(1);
+}
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: clip;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
 .fade-in {
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
 .fade-in.visible {
@@ -820,6 +874,89 @@ h3 {
         opacity: 1;
     }
 }
+.my-header-chomy {
+  font-family: "Great Vibes", cursive;
+  color: rgb(241, 219, 26);
+  text-align: center;
+  font-size: 3.4em;
+  background-size: cover;
+  background-position: center;
+  padding: 20px 0;
+  margin: 0;
+  width: 100%;
+}
+.styled-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  text-align: center; 
+}
+
+.styled-list li {
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  margin-bottom: 20px;
+}
+
+.styled-list i {
+  font-size: 1.4em;
+  color: rgb(241, 219, 26);
+  margin-right: 15px;
+}
+@media (max-width: 768px) {
+  .styled-list {
+    padding-left: 20px; 
+    text-align: left; 
+  }
+
+  .styled-list i {
+    font-size: 1.1em; 
+  }
+
+  .styled-list li {
+    margin-bottom: 15px; 
+  }
+}
+
+/* 480 */
+@media (max-width: 480px) {
+  .styled-list {
+    padding-left: 30px; 
+  }
+
+  .styled-list i {
+    font-size: 1.3em; 
+  }
+
+  .styled-list li {
+    margin-bottom: 10px; 
+  }
+}
+.centered-text {
+  text-align: left; 
+  font-size: 1.4em;
+  color: rgb(241, 219, 26);
+  margin: 0; 
+}
+
+.clickable-link {
+  color: rgb(241, 219, 26);
+  text-decoration: none;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.clickable-link:hover {
+  color: #666;
+}
+
+.clickable-link:active,
+.clickable-link:focus {
+  color: #666;
+  text-decoration: none;
+}
+
     </style>
   </head>
   <body class="fade-in">
@@ -880,7 +1017,29 @@ h3 {
     </nav>  
     <!--header-->
     <div class="content-section">
-      <h2 class="my-header22 fade-in">Пам'ятники для одного</h2>
+      <h2 class="my-header22 fade-in">Одинарні пам'ятники</h2>
+      <h3 class="my-header-chomy">Як зробити замовлення?</h3>
+      <ul class="styled-list centered-text">
+        <li>
+          <i class="fa-solid fa-scroll"></i>
+          <p>Визначіть для себе смисловий зміст майбутнього пам'ятника, які вірші відобразити, що втілити в камені.</p>
+        </li>
+        <li>
+          <i class="fa-solid fa-image"></i>
+          <p>Підготуйте фото, яке Ви б хотіли зобразити на пам'ятнику. Підготуйте точні дані про померлого — дати, ПІБ.</p>
+        </li>
+        <li>
+          <i class="fa-solid fa-pen-ruler"></i>
+          <p>Визначтесь із габаритними розмірами майбутнього надгробного пам'ятника, кольором і бажаним матеріалом.</p>
+        </li>
+        <li>
+          <i class="fas fa-phone"></i>
+          <p>
+            <a href="/elm/contacts.html" class="clickable-link">Зателефонуйте нам</a> або <i class="fa-solid fa-building"></i>
+            <a href="/elm/contacts.html" class="clickable-link"  target="_blank">завітайте в наш офіс</a>.
+          </p>
+        </li>
+      </ul>
       <div class="catalog-container">
         <div class="catalog-item fade-in">
           <img src="/imges/101.jpg" alt="Памятник 2">
@@ -1079,15 +1238,16 @@ h3 {
                   <h3 class="navigation-title">Каталог</h3>
                   <nav class="navigation">
                       <ul>
-                        <li><a href="#">Гранітні памятники:</a></li>
-                        <li><a href="/elm/odnogo.html">Для одного</a></li>
-                        <li><a href="/elm/dvog.html">Для двох</a></li>
-                        <li><a href="#">Елітні меморіальні комплекси</a></li>
-                        <li><a href="#">Для військових</a></li>
-                        <li><a href="#">Фотоскло</a></li>
-                        <li><a href="#">Аксесуари і декор</a></li>
-                        <li><a href="#">Спеціальна пропозиція</a></li>
-                        <li><a href="#">Родинні</a></li>
+                        <ul>
+                          <li><a href="/elm/pamytnyky.html">Гранітні памятники:</a></li>
+                          <li><a href="/elm/odnogo.html">Одинарні</a></li>
+                          <li><a href="/elm/dvog.html">Подвійні</a></li>
+                          <li><a href="/elm/rodynni.html">Родинні</a></li>
+                          <li><a href="/elm/viyska.html">Військовим</a></li>
+                          <li><a href="/elm/sklo.html">Фотоскло</a></li>
+                          <li><a href="/elm/elitnimemorial.html">Елітні меморіальні коплекси</a></li>
+                          <li><a href="#">Спеціальна пропозиція</a></li>
+                          <li><a href="#">Аксесуари та декор</a></li>
                       </ul>
                   </nav>
               </div>
@@ -1098,14 +1258,21 @@ h3 {
                       <i class="fas fa-map-marker-alt"></i>
                       <span>  проспект Трубників, 7 а. м. Нікополь <br> Дніпропетровська область, 53200</span>
                   </a>
-                      <a href="tel:+380123456789">
-                          <i class="fas fa-phone-alt"></i>
-                          <span>+380 66 260 18 59</span>
-                      </a>
-                      <a href="frolovastesha7@gmail.com">
-                          <i class="fas fa-envelope"></i>
-                          <span>frolovastesha7@gmail.com</span>
-                      </a>
+                  <a href="tel:+380753763635">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>+380 75 376 36 35</span>
+                </a>
+                <a href="tel:+380963763635">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>+380 96 376 36 35</span>
+                </a>
+                <a href="tel:+380733763635">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>+380 73 376 36 35</span>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=memoryartua@gmail.com" target="_blank">
+                      <i class="fas fa-envelope"></i>
+                      <span>memoryartua@gmail.com</span>
+                  </a>
                   </nav>
               </div>
           </div>
@@ -1204,5 +1371,19 @@ document.addEventListener("DOMContentLoaded", function () {
         console.warn("Кнопка 'Прокрутить вверх' не найдена на странице.");
     }
 });
+const lenis = new Lenis();
+
+// Listen for the scroll event and log the event data
+lenis.on('scroll', (e) => {
+  console.log(e);
+});
+
+// Use requestAnimationFrame to continuously update the scroll
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
   </script>
 </html>

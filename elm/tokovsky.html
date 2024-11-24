@@ -12,6 +12,8 @@
       href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.16/dist/lenis.css">
+<script src="https://unpkg.com/lenis@1.1.16/dist/lenis.min.js"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap"
       rel="stylesheet"
@@ -27,6 +29,7 @@
     <style>
      body {
         font-family: "Roboto", sans-serif;
+        background-image: url(/imges/ббб.webp);
         background-color: black;
         color: white;
         margin: 0;
@@ -45,7 +48,25 @@
   width: 100%;
   box-sizing: border-box;
 }
-
+html.lenis, html.lenis body { 
+  height: auto; 
+} 
+ 
+.lenis.lenis-smooth { 
+  scroll-behavior: auto !important; 
+} 
+ 
+.lenis.lenis-smooth [data-lenis-prevent] { 
+  overscroll-behavior: contain; 
+} 
+ 
+.lenis.lenis-stopped { 
+  overflow: clip; 
+} 
+ 
+.lenis.lenis-smooth iframe { 
+  pointer-events: none; 
+}
 .back-button {
   margin-right: 10px;
   font-family: 'Great Vibes', cursive;
@@ -80,7 +101,6 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        margin: 1em;
         border-radius: 5px;
         transition: transform 0.3s;
       }
@@ -408,6 +428,17 @@ body.fade-out {
   opacity: 0;
   transition: opacity 0.5s ease;
 }
+.product-image {
+  border: 5px solid rgb(241, 219, 26); /* Жовта рамка */
+  border-radius: 8px; /* Закруглені кути рамки (опціонально) */
+  padding: 5px; /* Відступ всередині рамки */
+  transition: transform 0.3s ease; /* Плавний ефект при наведенні */
+}
+
+.product-image:hover {
+  transform: scale(1.05); /* Збільшення зображення при наведенні */
+}
+
     </style>
   </head>
   <body class="fade-in">
@@ -616,6 +647,19 @@ if (diffX > 0) {
     }, 500);
   }
 }
+const lenis = new Lenis(); 
+ 
+ 
+lenis.on('scroll', (e) => { 
+  console.log(e); 
+}); 
+ 
+function raf(time) { 
+  lenis.raf(time); 
+  requestAnimationFrame(raf); 
+} 
+ 
+requestAnimationFrame(raf);
     </script>
      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
