@@ -1396,7 +1396,129 @@ ul li a:hover::after {
 }
 
 
-    </style>
+.highlighted-section {
+  margin-top: 80px;
+  margin-bottom: 60px; 
+  padding: 0 20px;
+  text-align: center;
+}
+
+
+/* Заголовок */
+.highlighted-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  padding: 0 50px;
+}
+
+.highlighted-title {
+  font-size: 56px;
+  font-weight: bold;
+  color: rgb(241, 219, 26);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.view-all {
+  font-size: 18px;
+  color:rgb(241, 219, 26);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.view-all i {
+  transition: transform 0.3s;
+}
+
+.view-all:hover i {
+  transform: translateX(6px);
+}
+
+/* Сетка изображений */
+.highlighted-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  justify-items: center;
+}
+
+/* Карточка */
+.highlighted-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  max-width: 350px;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  cursor: pointer;
+}
+
+.highlighted-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Изображение */
+.highlighted-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.highlighted-item:hover .highlighted-image {
+  transform: scale(1.1);
+}
+
+/* Оверлей */
+.item-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: rgb(241, 219, 26);
+  padding: 20px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  transform: translateY(100%);
+  transition: transform 0.4s ease;
+}
+
+.highlighted-item:hover .item-overlay {
+  transform: translateY(0);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .highlighted-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .highlighted-header {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .highlighted-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .highlighted-title {
+    font-size: 40px;
+  }
+}
+  </style>
   </head>
   <body class="fade-in">
     <h2 class="top-header header-shown">З турботою про головне</h2>
@@ -1461,8 +1583,8 @@ ul li a:hover::after {
       <div class="gallery-wrapper">
         <!-- Главное изображение -->
         <div class="main-image">
-          <a data-fancybox="gallery" href="/shar/black.mini.png">
-            <img src="/shar/black.mini.png" alt="Габро Premium куля" />
+          <a data-fancybox="gallery" href="/shary/bmini.jpg">
+            <img src="/shary/bmini.jpg" alt="Габро Premium куля" />
           </a>
           <!-- Стрелки навигации -->
           <div class="nav-arrow left-arrow">&lt;</div>
@@ -1471,17 +1593,17 @@ ul li a:hover::after {
       
         <!-- Миниатюры -->
         <div class="thumbnails">
-          <a data-fancybox="gallery" href="/shar/black.mini.png" class="thumbnail active">
-            <img src="/shar/black.mini.png" alt="Миниатюра 1" />
+          <a data-fancybox="gallery" href="/shary/bmini.jpg" class="thumbnail active">
+            <img src="/shary/bmini.jpg" alt="Миниатюра 1" />
           </a>
-          <a data-fancybox="gallery" href="/shar/balck.mesium.png" class="thumbnail">
-            <img src="/shar/balck.mesium.png" alt="Миниатюра 2" />
+          <a data-fancybox="gallery" href="/shary/bmed.jpg" class="thumbnail">
+            <img src="/shary/bmed.jpg" alt="Миниатюра 2" />
           </a>
-          <a data-fancybox="gallery" href="/shar/black_big.png" class="thumbnail">
-            <img src="/shar/black_big.png" alt="Миниатюра 3" />
+          <a data-fancybox="gallery" href="/shary/bbig.jpg" class="thumbnail">
+            <img src="/shary/bbig.jpg" alt="Миниатюра 3" />
           </a>
-          <a data-fancybox="gallery" href="/shar/razmetka.jpg" class="thumbnail">
-            <img src="/shar/razmetka.jpg" alt="Миниатюра 4" />
+          <a data-fancybox="gallery" href="/shary/raz.jpg" class="thumbnail">
+            <img src="/shary/raz.jpg" alt="Миниатюра 4" />
           </a>
         </div>
       </div>
@@ -1502,9 +1624,9 @@ ul li a:hover::after {
               <label for="size" class="size-label">Розмір:</label>
               <select id="size" class="size-dropdown">
                 <option value="default" data-src="" data-price="400">Обрати</option>
-                <option value="small" data-src="/shar/black.mini.png" data-price="400">10 см</option>
-                <option value="medium" data-src="/shar/balck.mesium.png" data-price="430">12 см</option>
-                <option value="large" data-src="/shar/black_big.png" data-price="700">15 см</option>
+                <option value="small" data-src="/shary/bmini.jpg" data-price="400">10 см</option>
+                <option value="medium" data-src="/shary/bmed.jpg" data-price="430">12 см</option>
+                <option value="large" data-src="/shary/bbig.jpg" data-price="700">15 см</option>
               </select>
             </div>
           </div>
@@ -1599,11 +1721,51 @@ ul li a:hover::after {
     </div>
   </div>
 </div>
+<!-- Вас може зацікавити page -->
+<div class="highlighted-section">
+  <div class="highlighted-header">
+    <h2 class="highlighted-title">Вас може зацікавити</h2>
+    <a href="/elm/shary.html" class="view-all">
+      Вся продукція <i class="fas fa-arrow-right"></i>
+    </a>
+  </div>
+  <div class="highlighted-grid">
+    <!-- Первый продукт -->
+    <div class="highlighted-item">
+      <a href="/elm/orangeshar.html">
+        <img src="/shary/orgmed.jpg" alt="Габро Premium куля" class="highlighted-image">
+        <div class="item-overlay">
+          <p class="item-name">Лезниківська куля</p>
+        </div>
+      </a>
+    </div>
+    <!-- Второй продукт -->
+    <div class="highlighted-item">
+      <a href="/elm/grayshar.html">
+        <img src="/shary/grmed.jpg" alt="Покостівська куля" class="highlighted-image">
+        <div class="item-overlay">
+          <p class="item-name">Покостівська куля</p>
+        </div>
+      </a>
+    </div>
+    <!-- Третий продукт -->
+    <div class="highlighted-item">
+      <a href="/elm/labroditikshar.html">
+        <img src="/shary/lbmed.jpg" alt="Лабрадорит куля" class="highlighted-image">
+        <div class="item-overlay">
+          <p class="item-name">Лабрадорит куля</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- footer -->
 <div class="grid">
   <div class="gray-background">
       <div>
         <div class="header-navigation">
-            <!-- Мини-заголовок и слоган -->
+            <!-- mini-header and slogan -->
             <div class="mini-header">
               <a href="/elm/index.html" style="text-decoration: none;">
                 <h2>MemoryArt</h2>

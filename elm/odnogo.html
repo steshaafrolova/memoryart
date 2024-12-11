@@ -730,6 +730,26 @@ h3 {
   font-size: 20px;
 }
 
+.btn-detail {
+  display: inline-block;
+  padding: 12px 24px; 
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #6e6e6e; 
+  text-align: center;
+  text-decoration: none;
+  border-radius: 0px; 
+  width: 100%;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-detail:hover {
+  background-color: #f1db1a; 
+  color: #000000;
+}
+
 .scroll-to-top:hover {
   background-color: #443436;
   color: rgb(241, 219, 26);
@@ -773,9 +793,8 @@ h3 {
 
 .catalog-item a {
   display: inline-block;
-  margin: 12px 0;
-  padding: 8px 14px;
-  font-size: 13px;
+
+  font-size: 17px;
   background-color: #443436;
   color: #ccc;
   text-decoration: none;
@@ -985,13 +1004,13 @@ html.lenis, html.lenis body {
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav w-100">
             <li class="nav-item">
-              <a class="flex-sm-fill text-sm-center nav-link" href="pamytnyky.html">Пам'ятники</a>
+              <a class="flex-sm-fill text-sm-center nav-link" href="/elm/pamytnyky.html">Пам'ятники</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="Vydygranity.html">Види граніту</a>
+              <a class="nav-link" href="/elm/Vydygranity.html">Види граніту</a>
             </li>
             <li class="nav-item">
-              <a class="flex-sm-fill text-sm-center nav-link" href="nashiroboty.html">Наші роботи</a>
+              <a class="flex-sm-fill text-sm-center nav-link" href="/elm/nashiroboty.html">Наші роботи</a>
             </li>
 <li class="nav-item dropdown">
   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-no-fade>
@@ -999,18 +1018,18 @@ html.lenis, html.lenis body {
   </a>
   <ul class="dropdown-menu" data-no-fade>
     <li>
-      <a class="dropdown-item" href="memoryart.html" data-no-fade>MemoryArt</a>
+      <a class="dropdown-item" href="/elm/memoryart.html" data-no-fade>MemoryArt</a>
     </li>
     <li>
-      <a class="dropdown-item" href="dostavkaioplata.html" data-no-fade>Доставка та оплата</a>
+      <a class="dropdown-item" href="/elm/dostavkaioplata.html" data-no-fade>Доставка та оплата</a>
     </li>
     <li>
-      <a class="dropdown-item" href="putanny.html" data-no-fade>Питання та відповіді</a>
+      <a class="dropdown-item" href="/elm/putanny.html" data-no-fade>Питання та відповіді</a>
     </li>
   </ul>
 </li>
 <li class="nav-item">
-  <a class="nav-link" href="contacts.html">Контакти</a>
+  <a class="nav-link" href="/elm/contacts.html">Контакти</a>
 </li>
         </div>
       </div>
@@ -1035,179 +1054,228 @@ html.lenis, html.lenis body {
         <li>
           <i class="fas fa-phone"></i>
           <p>
-            <a href="/elm/contacts.html" class="clickable-link">Зателефонуйте нам</a> або <i class="fa-solid fa-building"></i>
-            <a href="/elm/contacts.html" class="clickable-link"  target="_blank">завітайте в наш офіс</a>.
+            <a href="/elm/contacts.html" class="clickable-link">Зателефонуйте нам</a> 
           </p>
+          <li>
+            <i class="fa-solid fa-building"></i> 
+            <p>
+              <a href="/elm/contacts.html" class="clickable-link"  target="_blank">Завітайте в наш офіс</a>.
+            </p>
         </li>
       </ul>
       <div class="catalog-container">
         <div class="catalog-item fade-in">
-          <img src="/odynrni/1.jpg" alt="Памятник 2">
+          <a href="/odnogo/od1.html">
+            <img src="/solo/1.jpg" alt="Памятник 1">
+          </a>
           <h3>2</h3>
-          <a href="/odnogo/od1.html">Детально</a>
+          <a href="/odnogo/od1.html" class="btn-detail">Детально</a>
         </div>
         <div class="catalog-item fade-in">
-          <img src="/odynrni/5.jpg" alt="Памятник 3">
+          <a href="/odnogo/od5.html">
+            <img src="/solo/5.jpg" alt="Памятник 2">
+          </a>
           <h3>3</h3>
-          <a href="/odnogo/od5.html">Детально</a>
+          <a href="/odnogo/od5.html" class="btn-detail">Детально</a>
         </div>
         <div class="catalog-item fade-in">
-          <img src="/odynrni/6.jpg" alt="Памятник 10">
+          <a href="/odnogo/od6.html">
+            <img src="/solo/6.jpg" alt="Памятник 3">
+          </a>
           <h3>10</h3>
-          <a href="/odnogo/od6.html">Детально</a>
+          <a href="/odnogo/od6.html" class="btn-detail">Детально</a>
         </div>
         <div class="catalog-item fade-in">
-          <img src="/odynrni/7.jpg" alt="Памятник 11">
+          <a href="/odnogo/od7.html">
+            <img src="/solo/7.jpg" alt="Памятник 4">
+          </a>
           <h3>11</h3>
-          <a href="/odnogo/od7.html">Детально</a>
+          <a href="/odnogo/od7.html" class="btn-detail">Детально</a>
         </div>
         <div class="catalog-item fade-in">
-          <img src="/odynrni/8.jpg" alt="Памятник 22">
+          <a href="/odnogo/od8.html">
+            <img src="/solo/8.jpg" alt="Памятник 5">
+          </a>
           <h3>22</h3>
-          <a href="/odnogo/od8.html">Детально</a>
+          <a href="/odnogo/od8.html" class="btn-detail">Детально</a>
         </div>
         <div class="catalog-item fade-in">
-          <img src="/odynrni/9.jpg" alt="Памятник 26">
+          <a href="/odnogo/od9.html">
+            <img src="/solo/9.jpg" alt="Памятник 6">
+          </a>
           <h3>26</h3>
-          <a href="/odnogo/od9.html">Детально</a>
+          <a href="/odnogo/od9.html" class="btn-detail">Детально</a>
         </div>
         <div class="catalog-item fade-in">
-          <img src="/odynrni/10.jpg" alt="Памятник 27">
+          <a href="/odnogo/od10.html">
+            <img src="/solo/10.jpg" alt="Памятник 7">
+          </a>
           <h3>27</h3>
-          <a href="/odnogo/od10.html">Детально</a>
+          <a href="/odnogo/od10.html" class="btn-detail">Детально</a>
         </div>
         <div class="catalog-item fade-in">
-          <img src="/odynrni/13.jpg" alt="Памятник 18">
+          <a href="/odnogo/od13.html">
+            <img src="/solo/13.jpg" alt="Памятник 8">
+          </a>
           <h3>18</h3>
-          <a href="/odnogo/od13.html">Детально</a>
+          <a href="/odnogo/od13.html" class="btn-detail">Детально</a>
         </div>
         <div class="catalog-item fade-in">
-          <img src="/odynrni/22.jpg" alt="Памятник 12">
+          <a href="/odnogo/od22.html">
+            <img src="/solo/22.jpg" alt="Памятник 9">
+          </a>
           <h3>12</h3>
-          <a href="/odnogo/od22.html">Детально</a>
+          <a href="/odnogo/od22.html" class="btn-detail">Детально</a>
         </div>
         <div class="catalog-item fade-in">
-          <img src="/odynrni/23.jpg" alt="Памятник 14">
+          <a href="/odnogo/od23.html">
+            <img src="/solo/23.jpg" alt="Памятник 10">
+          </a>
           <h3>14</h3>
-          <a href="/odnogo/od23.html">Детально</a>
+          <a href="/odnogo/od23.html" class="btn-detail">Детально</a>
         </div>
         <div class="catalog-item fade-in">
-          <img src="/odynrni/24.jpg" alt="Памятник 15">
+          <a href="/odnogo/od24.html">
+            <img src="/solo/24.jpg" alt="Памятник 11">
+          </a>
           <h3>15</h3>
-          <a href="/odnogo/od24.html">Детально</a>
+          <a href="/odnogo/od24.html" class="btn-detail">Детально</a>
         </div>
         <div class="catalog-item fade-in">
-          <img src="/odynrni/25.jpg" alt="Памятник 16">
+          <a href="/odnogo/od25.html">
+            <img src="/solo/25.jpg" alt="Памятник 12">
+          </a>
           <h3>16</h3>
-          <a href="/odnogo/od25.html">Детально</a>
+          <a href="/odnogo/od25.html" class="btn-detail">Детально</a>
         </div>
         <div class="catalog-item fade-in">
-          <img src="/odynrni/26.jpg" alt="Памятник 28">
+          <a href="/odnogo/od26.html">
+            <img src="/solo/26.jpg" alt="Памятник 13">
+          </a>
           <h3>28</h3>
-          <a href="/odnogo/od26.html">Детально</a>
+          <a href="/odnogo/od26.html" class="btn-detail">Детально</a>
         </div>
         <div class="catalog-item fade-in">
-          <img src="/odynrni/28.jpg" alt="Памятник 19">
+          <a href="/odnogo/od28.html">
+            <img src="/solo/28.jpg" alt="Памятник 14">
+          </a>
           <h3>20</h3>
-          <a href="/odnogo/od28.html">Детально</a>
+          <a href="/odnogo/od28.html" class="btn-detail">Детально</a>
         </div>
         <div class="catalog-item fade-in">
-          <img src="/odynrni/2a.jpg" alt="Памятник 19">
+          <a href="/odnogo/od2.html">
+            <img src="/solo/2a.jpg" alt="Памятник 15">
+          </a>
           <h3>21</h3>
-          <a href="/odnogo/od2.html">Детально</a>
+          <a href="/odnogo/od2.html" class="btn-detail">Детально</a>
         </div>
         <div class="catalog-item fade-in">
-          <img src="/odynrni/3a.jpg" alt="Памятник 19">
+          <a href="/odnogo/od3.html">
+            <img src="/solo/3a.jpg" alt="Памятник 20">
+          </a>
           <h3>22</h3>
-          <a href="/odnogo/od3.html">Детально</a>
+          <a href="/odnogo/od3.html" class="btn-detail">Детально</a>
         </div>
         <div class="catalog-item fade-in">
-          <img src="/odynrni/4a.jpg" alt="Памятник 19">
+          <a href="/odnogo/od4.html">
+            <img src="/solo/4a.jpg" alt="Памятник 21">
+          </a>
           <h3>23</h3>
-          <a href="/odnogo/od4.html">Детально</a>
+          <a href="/odnogo/od4.html" class="btn-detail">Детально</a>
         </div>
         <div class="catalog-item fade-in">
-          <img src="/odynrni/11a.jpg" alt="Памятник 19">
+          <a href="/odnogo/od11.html">
+            <img src="/solo/11a.jpg" alt="Памятник 22">
+          </a>
           <h3>24</h3>
-          <a href="/odnogo/od11.html">Детально</a>
+          <a href="/odnogo/od11.html" class="btn-detail">Детально</a>
         </div>
         <div class="catalog-item fade-in">
-          <img src="/odynrni/12a.jpg" alt="Памятник 1">
+          <a href="/odnogo/od12.html">
+            <img src="/solo/12a.jpg" alt="Памятник 23">
+          </a>
           <h3>1</h3>
-          <a href="/odnogo/od12.html">Детально</a>
+          <a href="/odnogo/od12.html" class="btn-detail">Детально</a>
         </div>
         <div class="catalog-item fade-in">
-          <img src="/odynrni/14a.jpg" alt="Памятник 4">
+          <a href="/odnogo/od14.html">
+            <img src="/solo/14a.jpg" alt="Памятник 24">
+          </a>
           <h3>4</h3>
-          <a href="/odnogo/od14.html">Детально</a>
+          <a href="/odnogo/od14.html" class="btn-detail">Детально</a>
         </div>
         <div class="catalog-item fade-in">
-          <img src="/odynrni/15a.jpg" alt="Памятник 5">
+          <a href="/odnogo/od15.html">
+            <img src="/solo/15a.jpg" alt="Памятник 25">
+          </a>
           <h3>5</h3>
-          <a href="/odnogo/od15.html">Детально</a>
+          <a href="/odnogo/od15.html" class="btn-detail">Детально</a>
         </div>
         <div class="catalog-item fade-in">
-          <img src="/odynrni/16a.jpg" alt="Памятник 6">
+          <a href="/odnogo/od16.html">
+            <img src="/solo/16a.jpg" alt="Памятник 26">
+          </a>
           <h3>6</h3>
-          <a href="/odnogo/od16.html">Детально</a>
+          <a href="/odnogo/od16.html" class="btn-detail">Детально</a>
         </div>
         <div class="catalog-item fade-in">
-          <img src="/odynrni/17a.jpg" alt="Памятник 7">
+          <a href="/odnogo/od17.html">
+            <img src="/solo/17a.jpg" alt="Памятник 27">
+          </a>
           <h3>7</h3>
-          <a href="/odnogo/od17.html">Детально</a>
+          <a href="/odnogo/od17.html" class="btn-detail">Детально</a>
         </div>
         <div class="catalog-item fade-in">
-          <img src="/odynrni/18a.jpg" alt="Памятник 8">
+          <a href="/odnogo/od18.html">
+            <img src="/solo/18a.jpg" alt="Памятник 28">
+          </a>
           <h3>8</h3>
-          <a href="/odnogo/od18.html">Детально</a>
+          <a href="/odnogo/od18.html" class="btn-detail">Детально</a>
         </div>
         <div class="catalog-item fade-in">
-          <img src="/odynrni/19a.jpg" alt="Памятник 9">
+          <a href="/odnogo/od19.html">
+            <img src="/solo/19a.jpg" alt="Памятник 29">
+          </a>
           <h3>9</h3>
-          <a href="/odnogo/od19.html">Детально</a>
+          <a href="/odnogo/od19.html" class="btn-detail">Детально</a>
         </div>
         <div class="catalog-item fade-in">
-          <img src="/odynrni/20a.jpg" alt="Памятник 21">
+          <a href="/odnogo/od20.html">
+            <img src="/solo/20a.jpg" alt="Памятник 30">
+          </a>
           <h3>21</h3>
-          <a href="/odnogo/od20.html">Детально</a>
+          <a href="/odnogo/od20.html" class="btn-detail">Детально</a>
         </div>
         <div class="catalog-item fade-in">
-          <img src="/odynrni/21a.jpg" alt="Памятник 17">
+          <a href="/odnogo/od21.html">
+            <img src="/solo/21a.jpg" alt="Памятник 31">
+          </a>
           <h3>17</h3>
-          <a href="/odnogo/od21.html">Детально</a>
+          <a href="/odnogo/od21.html" class="btn-detail">Детально</a>
         </div>
         <div class="catalog-item fade-in">
-          <img src="/odynrni/27a.jpg" alt="Памятник 20">
+          <a href="/odnogo/od27.html">
+            <img src="/solo/27a.jpg" alt="Памятник 32">
+          </a>
           <h3>20</h3>
-          <a href="/odnogo/od27.html">Детально</a>
+          <a href="/odnogo/od27.html" class="btn-detail">Детально</a>
         </div>
         <div class="catalog-item fade-in">
-          <img src="/odynrni/29a.jpg" alt="Памятник 23">
+          <a href="/odnogo/od29.html">
+            <img src="/solo/29.jpg" alt="Памятник 33">
+          </a>
           <h3>23</h3>
-          <a href="/odnogo/od29.html">Детально</a>
+          <a href="/odnogo/od29.html" class="btn-detail">Детально</a>
         </div>
         <div class="catalog-item fade-in">
-          <img src="/odynrni/30a.jpg" alt="Памятник 24">
+          <a href="/odnogo/od30.html">
+            <img src="/solo/30.jpg" alt="Памятник 34">
+          </a>
           <h3>24</h3>
-          <a href="/odnogo/od30.html">Детально</a>
-        </div>
-        <div class="catalog-item fade-in">
-          <img src="/odynrni/31a.jpg" alt="Памятник 25">
-          <h3>25</h3>
-          <a href="/odnogo/od31.html">Детально</a>
-        </div>
-        <div class="catalog-item fade-in">
-          <img src="/odynrni/32a.jpg" alt="Памятник 13">
-          <h3>13</h3>
-          <a href="/odnogo/od32.html">Детально</a>
-        </div>
-        <div class="catalog-item fade-in">
-          <img src="/odynrni/33a.jpg" alt="Памятник 13">
-          <h3>13</h3>
-          <a href="/odnogo/od33.html">Детально</a>
+          <a href="/odnogo/od30.html" class="btn-detail">Детально</a>
         </div>
       </div>
-    </div>    
+      
   <div id="scrollToTopBtn" class="scroll-to-top">
     <i class="fas fa-arrow-up"></i> 
   </div>
@@ -1251,8 +1319,8 @@ html.lenis, html.lenis body {
                           <li><a href="/elm/viyska.html">Військовим</a></li>
                           <li><a href="/elm/sklo.html">Фотоскло</a></li>
                           <li><a href="/elm/elitnimemorial.html">Елітні меморіальні коплекси</a></li>
-                          <li><a href="#">Спеціальна пропозиція</a></li>
-                          <li><a href="#">Аксесуари та декор</a></li>
+                          <li><a href="/elm/specpropoz.html">Спеціальна пропозиція</a></li>
+                          <li><a href="/elm/acsesiris.html">Аксесуари та декор</a></li>
                       </ul>
                   </nav>
               </div>

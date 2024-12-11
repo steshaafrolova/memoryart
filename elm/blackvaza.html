@@ -1394,7 +1394,129 @@ ul li a:hover::after {
     font-style: italic;
     color: rgb(241, 219, 26); /* или любой другой цвет */
 }
+/* new */
+.highlighted-section {
+  margin-top: 80px;
+  margin-bottom: 60px; 
+  padding: 0 20px;
+  text-align: center;
+}
 
+
+/* Заголовок */
+.highlighted-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  padding: 0 50px;
+}
+
+.highlighted-title {
+  font-size: 38px;
+  font-weight: bold;
+  color:rgb(241, 219, 26);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.view-all {
+  font-size: 18px;
+  color: rgb(241, 219, 26);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.view-all i {
+  transition: transform 0.3s;
+}
+
+.view-all:hover i {
+  transform: translateX(6px);
+}
+
+/* Сетка изображений */
+.highlighted-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  justify-items: center;
+}
+
+/* Карточка */
+.highlighted-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  max-width: 350px;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  cursor: pointer;
+}
+
+.highlighted-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Изображение */
+.highlighted-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.highlighted-item:hover .highlighted-image {
+  transform: scale(1.1);
+}
+
+/* Оверлей */
+.item-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: rgb(241, 219, 26);
+  padding: 20px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  transform: translateY(100%);
+  transition: transform 0.4s ease;
+}
+
+.highlighted-item:hover .item-overlay {
+  transform: translateY(0);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .highlighted-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .highlighted-header {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .highlighted-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .highlighted-title {
+    font-size: 40px;
+  }
+}
     </style>
   </head>
   <body class="fade-in">
@@ -1460,8 +1582,8 @@ ul li a:hover::after {
       <div class="gallery-wrapper">
         <!-- Главное изображение -->
         <div class="main-image">
-          <a data-fancybox="gallery" href="/vazy/vbmini.png">
-            <img src="/vazy/vbmini.png" alt="Габро Premium куля" />
+          <a data-fancybox="gallery" href="/vaza/bmini.jpg">
+            <img src="/vaza/bmini.jpg" alt="Габро Premium куля" />
           </a>
           <!-- Стрелки навигации -->
           <div class="nav-arrow left-arrow">&lt;</div>
@@ -1470,17 +1592,17 @@ ul li a:hover::after {
       
         <!-- Миниатюры -->
         <div class="thumbnails">
-          <a data-fancybox="gallery" href="/vazy/vbmini.png" class="thumbnail active">
-            <img src="/vazy/vbmini.png" alt="Миниатюра 1" />
+          <a data-fancybox="gallery" href="/vaza/bmini.jpg" class="thumbnail active">
+            <img src="/vaza/bmini.jpg" alt="Миниатюра 1" />
           </a>
-          <a data-fancybox="gallery" href="/vazy/midiumblack.png" class="thumbnail">
-            <img src="/vazy/midiumblack.png" alt="Миниатюра 2" />
+          <a data-fancybox="gallery" href="/vaza/bmed.jpg" class="thumbnail">
+            <img src="/vaza/bmed.jpg" alt="Миниатюра 2" />
           </a>
-          <a data-fancybox="gallery" href="/vazy/bigblackvaza.png" class="thumbnail">
-            <img src="/vazy/bigblackvaza.png" alt="Миниатюра 3" />
+          <a data-fancybox="gallery" href="/vaza/bbig.jpg" class="thumbnail">
+            <img src="/vaza/bbig.jpg" alt="Миниатюра 3" />
           </a>
-          <a data-fancybox="gallery" href="/vazy/vazy.png" class="thumbnail">
-            <img src="/vazy/vazy.png" alt="Миниатюра 4" />
+          <a data-fancybox="gallery" href="/vaza/raz.jpg" class="thumbnail">
+            <img src="/vaza/raz.jpg" alt="Миниатюра 4" />
           </a>
         </div>
       </div>
@@ -1502,9 +1624,9 @@ ul li a:hover::after {
               <label for="size" class="size-label">Розмір:</label>
               <select id="size" class="size-dropdown">
                 <option value="default" data-src="" data-price="600">Обрати</option>
-                <option value="small" data-src="/vazy/vbmini.png" data-price="630">25 см</option>
-                <option value="medium" data-src="/vazy/midiumblack.png" data-price="670">30 см</option>
-                <option value="large" data-src="/vazy/bigblackvaza.png" data-price="980">40 см</option>
+                <option value="small" data-src="/vaza/bmini.jpg" data-price="630">25 см</option>
+                <option value="medium" data-src="/vaza/bmed.jpg" data-price="670">30 см</option>
+                <option value="large" data-src="/vaza/bbig.jpg" data-price="980">40 см</option>
               </select>
             </div>
           </div>
@@ -1599,6 +1721,45 @@ ul li a:hover::after {
     </div>
   </div>
 </div>
+<!-- Вас може зацікавити page -->
+<div class="highlighted-section">
+  <div class="highlighted-header">
+    <h2 class="highlighted-title">Вас може зацікавити</h2>
+    <a href="/elm/vaza.html" class="view-all">
+      Вся продукція <i class="fas fa-arrow-right"></i>
+    </a>
+  </div>
+  <div class="highlighted-grid">
+    <!-- Первый продукт -->
+    <div class="highlighted-item">
+      <a href="/elm/orangvaza.html">
+        <img src="/vaza/ornmini.jpg" alt="Лезниківська ваза" class="highlighted-image">
+        <div class="item-overlay">
+          <p class="item-name">Лезниківська ваза</p>
+        </div>
+      </a>
+    </div>
+    <!-- Второй продукт -->
+    <div class="highlighted-item">
+      <a href="/elm/grayvaza.html">
+        <img src="/vaza/gmini.jpg" alt="Покостівська куля" class="highlighted-image">
+        <div class="item-overlay">
+          <p class="item-name">Покостівська ваза</p>
+        </div>
+      </a>
+    </div>
+    <!-- Третий продукт -->
+    <div class="highlighted-item">
+      <a href="/elm/labroddivaza.html">
+        <img src="/vaza/labmini.jpg" alt="Лабрадорит куля" class="highlighted-image">
+        <div class="item-overlay">
+          <p class="item-name">Лабрадорит ваза</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
 <div class="grid">
   <div class="gray-background">
       <div>

@@ -796,9 +796,7 @@ ul li a:hover::after {
 
 .catalog-item a {
   display: inline-block;
-  margin: 12px 0;
-  padding: 8px 14px;
-  font-size: 13px;
+  font-size: 17px;
   background-color: #443436;
   color: #ccc;
   text-decoration: none;
@@ -925,6 +923,25 @@ html.lenis, html.lenis body {
 .lenis.lenis-smooth iframe {
   pointer-events: none;
 }
+.btn-detail {
+  display: inline-block;
+  padding: 12px 24px; 
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #6e6e6e; 
+  text-align: center;
+  text-decoration: none;
+  border-radius: 0px; 
+  width: 100%;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-detail:hover {
+  background-color: #f1db1a; 
+  color: #000000;
+}
     </style>
   </head>
   <body class="fade-in">
@@ -1003,79 +1020,96 @@ html.lenis, html.lenis body {
         <li>
           <i class="fas fa-phone"></i>
           <p>
-            <a href="/elm/contacts.html" class="clickable-link">Зателефонуйте нам</a> або <i class="fa-solid fa-building"></i>
-            <a href="/elm/contacts.html" class="clickable-link"  target="_blank">завітайте в наш офіс</a>.
+            <a href="/elm/contacts.html" class="clickable-link">Зателефонуйте нам</a> 
           </p>
+          <li>
+            <i class="fa-solid fa-building"></i> 
+            <p>
+              <a href="/elm/contacts.html" class="clickable-link"  target="_blank">Завітайте в наш офіс</a>.
+            </p>
         </li>
       </ul>
 <!-- pamytnyky -->
 <div class="catalog-container">
   <div class="catalog-item fade-in">
-      <img src="/family/2.jpg" alt="Памятник 1">
-      <h3>1</h3>
-      <a href="/fam/fam2.html">Детально</a>
+    <a href="/fam/fam2.html">
+      <img src="/fami/2a.jpg" alt="Памятник 1">
+    </a>
+    <h3>2</h3>
+    <a href="/fam/fam2.html" class="btn-detail">Детально</a>
   </div>
   <div class="catalog-item fade-in">
-      <img src="/family/3.jpg" alt="Памятник 2">
-      <h3>2</h3>
-      <a href="/fam/fam3.html">Детально</a>
+    <a href="/fam/fam3.html">
+      <img src="/fami/3a.jpg" alt="Памятник 2">
+    </a>
+    <h3>3</h3>
+    <a href="/fam/fam3.html" class="btn-detail">Детально</a>
   </div>
   <div class="catalog-item fade-in">
-      <img src="/family/4.jpg" alt="Памятник 3">
-      <h3>3</h3>
-      <a href="/fam/fam4.html">Детально</a>
+    <a href="/fam/fam4.html">
+      <img src="/fami/4a.jpg" alt="Памятник 3">
+    </a>
+    <h3>10</h3>
+    <a href="/fam/fam4.html" class="btn-detail">Детально</a>
   </div>
   <div class="catalog-item fade-in">
-      <img src="/family/5.jpg" alt="Памятник 4">
-      <h3>4</h3>
-      <a href="/fam/fam5.html">Детально</a>
+    <a href="/fam/fam5.html">
+      <img src="/fami/5a.jpg" alt="Памятник 4">
+    </a>
+    <h3>11</h3>
+    <a href="/fam/fam5.html" class="btn-detail">Детально</a>
   </div>
   <div class="catalog-item fade-in">
-      <img src="/family/6.jpg" alt="Памятник 5">
-      <h3>5</h3>
-      <a href="/fam/fam6.html">Детально</a>
+    <a href="/fam/fam6.html">
+      <img src="/fami/6a.jpg" alt="Памятник 5">
+    </a>
+    <h3>22</h3>
+    <a href="/fam/fam6.html" class="btn-detail">Детально</a>
   </div>
   <div class="catalog-item fade-in">
-      <img src="/family/7.jpg" alt="Памятник 6">
-      <h3>6</h3>
-      <a href="/fam/fam7.html">Детально</a>
+    <a href="/fam/fam8.html">
+      <img src="/fami/8a.jpg" alt="Памятник 6">
+    </a>
+    <h3>26</h3>
+    <a href="/fam/fam8.html" class="btn-detail">Детально</a>
   </div>
   <div class="catalog-item fade-in">
-      <img src="/family/9.jpg" alt="Памятник 7">
-      <h3>7</h3>
-      <a href="/fam/fam9.html">Детально</a>
+    <a href="/fam/fam9.html">
+      <img src="/fami/9a.jpg" alt="Памятник 7">
+    </a>
+    <h3>27</h3>
+    <a href="/fam/fam9.html" class="btn-detail">Детально</a>
   </div>
   <div class="catalog-item fade-in">
-      <img src="/family/10.jpg" alt="Памятник 8">
-      <h3>8</h3>
-      <a href="/fam/fam10.html">Детально</a>
+    <a href="/fam/fam1.html">
+      <img src="/fami/1.jpg" alt="Памятник 8">
+    </a>
+    <h3>18</h3>
+    <a href="/fam/fam1.html" class="btn-detail">Детально</a>
   </div>
   <div class="catalog-item fade-in">
-      <img src="/family/12.jpg" alt="Памятник 9">
-      <h3>9</h3>
-      <a href="/fam/fam12.html">Детально</a>
+    <a href="/fam/fam7.html">
+      <img src="/fami/7.jpg" alt="Памятник 9">
+    </a>
+    <h3>12</h3>
+    <a href="/fam/fam7.html" class="btn-detail">Детально</a>
   </div>
   <div class="catalog-item fade-in">
-      <img src="/family/1a.jpg" alt="Памятник 10">
-      <h3>10</h3>
-      <a href="/fam/fam1.html">Детально</a>
+    <a href="/fam/fam10.html">
+      <img src="/fami/10.jpg" alt="Памятник 10">
+    </a>
+    <h3>14</h3>
+    <a href="/fam/fam10.html" class="btn-detail">Детально</a>
   </div>
   <div class="catalog-item fade-in">
-      <img src="/family/8a.jpg" alt="Памятник 11">
-      <h3>11</h3>
-      <a href="/fam/fam8.html">Детально</a>
-  </div>
-  <div class="catalog-item fade-in">
-      <img src="/family/11a.jpg" alt="Памятник 21">
-      <h3>21</h3>
-      <a href="/fam/fam11.html">Детально</a>
-  </div>
-  <div class="catalog-item fade-in">
-      <img src="/family/13a.jpg" alt="Памятник 22">
-      <h3>22</h3>
-      <a href="/fam/fam13.html">Детально</a>
+    <a href="/fam/fam11.html">
+      <img src="/fami/11.jpg" alt="Памятник 11">
+    </a>
+    <h3>15</h3>
+    <a href="/fam/fam11.html" class="btn-detail">Детально</a>
   </div>
 </div>
+
   <div id="scrollToTopBtn" class="scroll-to-top">
     <i class="fas fa-arrow-up"></i> 
   </div>

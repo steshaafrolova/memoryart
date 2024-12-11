@@ -1375,8 +1375,94 @@ ul li a:hover::after {
   background-color: #000000;
   border-radius: 10px; 
 }
+/* Общие стили */
+.thumbnails {
+  display: flex;
+  justify-content: center;
+  gap: 2%;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
 
+.thumbnail {
+  width: calc(20% - 10px); /* Динамическая ширина */
+  max-width: 100px;
+  height: auto;
+  aspect-ratio: 1/1; /* Сохраняем пропорции */
+  border: 2px solid transparent;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
 
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: #a99999;
+  transition: transform 0.3s ease;
+}
+
+.thumbnail:hover img {
+  transform: scale(1.1);
+}
+
+.thumbnail.active {
+  border-color: gold;
+}
+
+/* Адаптивные стили */
+@media (max-width: 1024px) {
+  .thumbnails {
+    gap: 5%;
+  }
+
+  .thumbnail {
+    width: calc(25% - 10px);
+  }
+}
+
+@media (max-width: 768px) {
+  .thumbnails {
+    flex-wrap: wrap;
+    gap: 5%;
+  }
+
+  .thumbnail {
+    width: calc(33.33% - 10px);
+  }
+
+  .product-title {
+    font-size: 1.6em;
+  }
+
+  .product-description {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 576px) {
+  .thumbnails {
+    gap: 5%;
+  }
+
+  .thumbnail {
+    width: calc(50% - 10px);
+  }
+
+  .product-title {
+    font-size: 1.4em;
+  }
+
+  .product-description {
+    font-size: 0.9em;
+  }
+
+  .highlighted-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
 .description-content {
   max-height: 0;
@@ -1394,7 +1480,125 @@ ul li a:hover::after {
     font-style: italic;
     color: rgb(241, 219, 26);
 }
+.highlighted-section {
+  margin-top: 80px;
+  margin-bottom: 60px; 
+  padding: 0 20px;
+  text-align: center;
+}
 
+
+
+.highlighted-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  padding: 0 50px;
+}
+
+.highlighted-title {
+  font-size: 38px;
+  font-weight: bold;
+  color:rgb(241, 219, 26);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.view-all {
+  font-size: 18px;
+  color: rgb(241, 219, 26);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.view-all i {
+  transition: transform 0.3s;
+}
+
+.view-all:hover i {
+  transform: translateX(6px);
+}
+
+
+.highlighted-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  justify-items: center;
+}
+
+
+.highlighted-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  width: 250px; 
+  height: 333px; 
+  cursor: pointer;
+}
+
+
+.highlighted-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+/* On Hover Effects */
+.highlighted-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Оверлей */
+.item-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: rgb(241, 219, 26);
+  padding: 20px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  transform: translateY(100%);
+  transition: transform 0.4s ease;
+}
+
+.highlighted-item:hover .item-overlay {
+  transform: translateY(0);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .highlighted-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .highlighted-header {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .highlighted-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .highlighted-title {
+    font-size: 40px;
+  }
+}
     </style>
   </head>
   <body class="fade-in">
@@ -1423,13 +1627,13 @@ ul li a:hover::after {
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav w-100">
             <li class="nav-item">
-              <a class="flex-sm-fill text-sm-center nav-link" href="pamytnyky.html">Пам'ятники</a>
+              <a class="flex-sm-fill text-sm-center nav-link" href="/elm/pamytnyky.html">Пам'ятники</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="Vydygranity.html">Види граніту</a>
+              <a class="nav-link" href="/elm/Vydygranity.html">Види граніту</a>
             </li>
             <li class="nav-item">
-              <a class="flex-sm-fill text-sm-center nav-link" href="nashiroboty.html">Наші роботи</a>
+              <a class="flex-sm-fill text-sm-center nav-link" href="/elm/nashiroboty.html">Наші роботи</a>
             </li>
 <li class="nav-item dropdown">
   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-no-fade>
@@ -1437,31 +1641,31 @@ ul li a:hover::after {
   </a>
   <ul class="dropdown-menu" data-no-fade>
     <li>
-      <a class="dropdown-item" href="memoryart.html" data-no-fade>MemoryArt</a>
+      <a class="dropdown-item" href="/elm/memoryart.html" data-no-fade>MemoryArt</a>
     </li>
     <li>
-      <a class="dropdown-item" href="dostavkaioplata.html" data-no-fade>Доставка та оплата</a>
+      <a class="dropdown-item" href="/elm/dostavkaioplata.html" data-no-fade>Доставка та оплата</a>
     </li>
     <li>
-      <a class="dropdown-item" href="putanny.html" data-no-fade>Питання та відповіді</a>
+      <a class="dropdown-item" href="/elm/putanny.html" data-no-fade>Питання та відповіді</a>
     </li>
   </ul>
 </li>
 <li class="nav-item">
-  <a class="nav-link" href="contacts.html">Контакти</a>
+  <a class="nav-link" href="/elm/contacts.html">Контакти</a>
 </li>
         </div>
       </div>
-    </nav>
+    </nav>   
     <!--header-->
-    <h2 class="my-header-chomy fade-in">Покостівська ваза</h2>
+    <h2 class="my-header-chomy fade-in">Елітні меморіальні коплекси</h2>
     <div class="product-page">
       <!-- Левый блок: изображение с миниатюрами -->
       <div class="gallery-wrapper">
         <!-- Главное изображение -->
         <div class="main-image">
-          <a data-fancybox="gallery" href="/vazy/minigrey.png">
-            <img src="/vazy/minigrey.png" alt="Покостівська ваза" />
+          <a data-fancybox="gallery" href="/ekskluziv/19a.jpg">
+            <img src="/ekskluziv/19a.jpg" alt="Покостівська ваза" />
           </a>
           <!-- Стрелки навигации -->
           <div class="nav-arrow left-arrow">&lt;</div>
@@ -1470,17 +1674,8 @@ ul li a:hover::after {
       
         <!-- Миниатюры -->
         <div class="thumbnails">
-          <a data-fancybox="gallery" href="/vazy/minigrey.png" class="thumbnail active">
-            <img src="/vazy/minigrey.png" alt="Миниатюра 1" />
-          </a>
-          <a data-fancybox="gallery" href="/vazy/mediumgre.png" class="thumbnail">
-            <img src="/vazy/mediumgre.png" alt="Миниатюра 2" />
-          </a>
-          <a data-fancybox="gallery" href="/vazy/biggray.png" class="thumbnail">
-            <img src="/vazy/biggray.png" alt="Миниатюра 3" />
-          </a>
-          <a data-fancybox="gallery" href="/vazy/vazy.png" class="thumbnail">
-            <img src="/vazy/vazy.png" alt="Миниатюра 4" />
+          <a data-fancybox="gallery" href="/ekskluziv/19a.jpg" class="thumbnail active">
+            <img src="/ekskluziv/19a.jpg" lt="Миниатюра 1" />
           </a>
         </div>
       </div>
@@ -1501,10 +1696,8 @@ ul li a:hover::after {
             <div class="product-size-selector">
               <label for="size" class="size-label">Розмір:</label>
               <select id="size" class="size-dropdown">
-                <option value="default" data-src="" data-price="600">Обрати</option>
-                <option value="small" data-src="/vazy/minigrey.png" data-price="630">25 см</option>
-                <option value="medium" data-src="/vazy/mediumgre.png" data-price="670">30 см</option>
-                <option value="large" data-src="/vazy/biggray.png" data-price="980">40 см</option>
+                <option value="default" data-src="/ekskluziv/19a.jpg" data-price="600">Обрати</option>
+                <option value="small" data-src="/ekskluziv/19a.jpg" data-price="630">25 см</option>
               </select>
             </div>
           </div>
@@ -1596,6 +1789,52 @@ ul li a:hover::after {
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрити</button>
       </div>
+    </div>
+  </div>
+</div>
+<!-- Вас може зацікавити page -->
+<div class="highlighted-section">
+  <div class="highlighted-header">
+    <h2 class="highlighted-title">Вас може зацікавити</h2>
+    <a href="/elm/elitnimemorial.html" class="view-all">
+      Вся продукція <i class="fas fa-arrow-right"></i>
+    </a>
+  </div>
+  <div class="highlighted-grid">
+    <!-- Первый продукт -->
+    <div class="highlighted-item">
+      <a href="/elitpamytnyky/elit10.html">
+        <img src="/ekskluziv/10a.jpg" alt="Лезниківська балясина" class="highlighted-image">
+        <div class="item-overlay">
+          <p class="item-name">Елітні меморіальні коплекси</p>
+        </div>
+      </a>
+    </div>
+    <!-- Второй продукт -->
+    <div class="highlighted-item">
+      <a href="/elitpamytnyky/elit12.html">
+        <img src="/ekskluziv/12a.jpg" alt="Покостівська балясина" class="highlighted-image">
+        <div class="item-overlay">
+          <p class="item-name">Елітні меморіальні коплекси</p>
+        </div>
+      </a>
+    </div>
+    <!-- Третий продукт -->
+    <div class="highlighted-item">
+      <a href="/elitpamytnyky/elit11.html">
+        <img src="/ekskluziv/11a.jpg" alt="Лабрадорит балясина" class="highlighted-image">
+        <div class="item-overlay">
+          <p class="item-name">Елітні меморіальні коплекси</p>
+        </div>
+      </a>
+    </div>
+    <div class="highlighted-item">
+      <a href="/elitpamytnyky/elit13.html">
+        <img src="/ekskluziv/13a.jpg" alt="Лабрадорит балясина" class="highlighted-image">
+        <div class="item-overlay">
+          <p class="item-name">Елітні меморіальні коплекси</p>
+        </div>
+      </a>
     </div>
   </div>
 </div>
