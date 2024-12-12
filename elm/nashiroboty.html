@@ -635,6 +635,18 @@ html.lenis, html.lenis body {
 .lenis.lenis-smooth iframe {
   pointer-events: none;
 }
+.video-container video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .video-container video {
+    width: 100%;
+    height: auto;
+  }
+}
 
     </style>
   </head>
@@ -708,38 +720,42 @@ html.lenis, html.lenis body {
     Кожен етап цього проєкту проходить з максимальною увагою до деталей, співчуттям та турботою. Команда активно співпрацює з родинами загиблих, дбайливо узгоджуючи кожне рішення, щоб кожен елемент відповідав сподіванням близьких.
   </p>
   </div>
-  <!--video-->
   <div class="fade-in">
-  <div class="media-container">
-    <div class="video-container">
-      <video class="responsive-video " autoplay muted loop>
-        <source src="/imges/nchalo33.mp4" type="video/mp4">
-      </video>
+    <div class="media-container">
+      <div class="video-container">
+        <video class="responsive-video" autoplay muted loop playsinline>
+          <source src="/imges/nchalo33.webm" type="video/webp">
+        </video>
+      </div>
+      <!-- Текст под видео -->
+      <div class="fade-in"></div>
+      <div class="video-description">
+        На відео показано детальний процес створення 
+        <a href="/elm/pamytnyky.html" style="color: #f1db1a; text-decoration: underline;">пам’ятників</a> для Аллеї пам’яті.<br> 
+        Починається з вибору високоякісного каменю, що забезпечує довговічність та витонченість готового виробу. Кожен камінь обробляється з великою майстерністю: відточуються контури, відшліфовується поверхня, наносяться гравіювання та символи. Ці етапи потребують уваги та точності, адже кожна деталь символізує повагу до героїв і їхнього подвигу.<br>
+        Готовий пам’ятник — це не просто камінь, а глибокий символ, створений для збереження пам’яті про полеглих, і кожен елемент важливий для передачі цього значення.
+      </div>
     </div>
-    <!--text under-->
-  <div class="fade-in"></div>
-    <div class="video-description">
-      На відео показано детальний процес створення  <a href="/elm/pamytnyky.html" style="color: #f1db1a; text-decoration: underline;">пам’ятників</a> для Аллеї пам’яті.<br> Починається з вибору високоякісного каменю, що забезпечує довговічність та витонченість готового виробу. Кожен камінь обробляється з великою майстерністю: відточуються контури, відшліфовується поверхня, наносяться гравіювання та символи. Ці етапи потребують уваги та точності, адже кожна деталь символізує повагу до героїв і їхнього подвигу.<br>
-      Готовий пам’ятник — це не просто камінь, а глибокий символ, створений для збереження пам’яті про полеглих, і кожен елемент важливий для передачі цього значення.
+    <div class="fade-in">
+      <h3 class="my-header-mini">Підготовка до встановлення пам’ятників на Алеї загиблих:</h3>
+    </div>
+    <div class="fade-in media-container">
+      <!-- Текст слева -->
+      <div class="video-description">
+        <p>Далі відповідальний процес підготовки до встановлення пам’ятників на Алеї пам’яті.<br>
+           Кожен етап, від розмітки до підготовки основи, виконується з особливою точністю, щоб створити місце для гідного вшанування героїв.<br>
+           Команда ретельно обробляє ділянку, щоб пам’ятники стояли міцно й гармонійно, і кожна деталь продумана з повагою до подвигу загиблих.
+        </p>
+      </div>
+      <!-- Видео справа -->
+      <div class="video-container">
+        <video class="responsive-video" autoplay muted loop playsinline>
+          <source src="/imges/vasilievskiy.webp" type="video/webp">
+        </video>
+      </div>
     </div>
   </div>
-  <div class="fade-in">
-  <h3 class="my-header-mini">Підготовка до встановлення пам’ятників на Алеї загиблих:</h3>
-  </div>
-  <div class="fade-in media-container">
-    <!-- Текст слева -->
-    <div class="video-description">
-      <p>Далі відповідальний процес підготовки до встановлення пам’ятників на Алеї пам’яті.<br>
-         Кожен етап, від розмітки до підготовки основи, виконується з особливою точністю, щоб створити місце для гідного вшанування героїв.<br>
-          Команда ретельно обробляє ділянку, щоб пам’ятники стояли міцно й гармонійно, і кожна деталь продумана з повагою до подвигу загиблих.</p>
-    </div>
-    <!-- Видео справа -->
-    <div class="video-container">
-      <video class="responsive-video" autoplay muted loop>
-        <source src="/imges/vstanovlennia.mp4" type="video/mp4">
-      </video>
-    </div>
-  </div>
+  
   
   <div id="scrollToTopBtn" class="scroll-to-top">
     <i class="fas fa-arrow-up"></i>
