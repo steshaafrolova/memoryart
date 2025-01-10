@@ -575,14 +575,15 @@ ul li a:hover::after {
 
 .video-container {
   margin-right: 20px; /* Отступ между видео и текстом */
-  margin-left: 20px; /* Отступ слева для видео */
+  margin-left: 20px;  /* Отступ слева для видео */
 }
 
 .responsive-video {
-  width: 250px; /* Уменьшение ширины видео */
-  height: auto; /* Сохранение пропорций видео */
-  object-fit: cover; /* Чтобы видео не изменяло свои пропорции */
+  width: 250px;       /* Ширина видео */
+  height: 400px;      /* Увеличенная высота */
+  object-fit: cover;  /* Сохранение пропорций и обрезка лишнего */
 }
+
 
 .video-description {
   max-width: 500px; /* Увеличение ширины текстового блока */
@@ -754,7 +755,7 @@ html.lenis, html.lenis body {
       <!-- Видео справа -->
       <div class="video-container">
         <video class="responsive-video" autoplay muted loop playsinline>
-          <source src="/imges/vstanovlennia.mp4" type="video/mp4">
+          <source src="/imges/vsatovlennya.mp4" type="video/mp4">
         </video>
       </div>
     </div>
